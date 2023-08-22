@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+body {
+  margin: 0;
+  background: #15151e;
+}
+body .horWrapper {
+  overflow: hidden;
+}
+body .horWrapper .card-holder {
+  width: fit-content;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.cards {
+  display: flex;
+  height: 100vh;
+  min-width: 100vw;
+  background: pink;
+  font-family: "Staatliches", cursive;
+  font-size: 30vw;
+  flex-shrink: 0;
+  padding-right: 0.3em;
+  padding-left: 0.3em;
+  color: #e10600;
+  margin: 0;
+}
+
+.card-holder .cards:last-of-type {
+  background: #e1e1ff;
+}
+
+.lightBG {
+  background: #313143;
+}
+
+.h-20vh {
+  height: 20vh;
+}
+
+.h-30vh {
+  height: 30vh;
+}
+
+.h-50vh {
+  height: 0vh;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+/*# sourceMappingURL=y.css.map */
