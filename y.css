@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://use.typekit.net/cxp7rij.css");
 .lenis.lenis-smooth {
   scroll-behavior: auto;
 }
@@ -15,9 +15,61 @@
   pointer-events: none;
 }
 
+.h1 {
+  display: flex;
+  font-size: x-large;
+}
+
 body {
   margin: 0;
-  background: #15151e;
+  background: #e1e1ff;
+  color: purple;
+}
+body .lander {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+body .lander .menuWrapper {
+  display: flex;
+  height: 10%;
+  flex-direction: row;
+  color: #e10600;
+  font-family: "field-gothic-wide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body .lander .menuWrapper nav {
+  display: flex;
+  width: calc(100vw - 128px);
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+}
+body .lander .menuWrapper nav .menu-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .lander .menuWrapper nav .menu-items span {
+  display: flex;
+  flex-direction: column;
+}
+body .lander .menuWrapper nav .menu-items span ul {
+  list-style-type: none;
+}
+body .lander .menuWrapper nav .menu-items span ul li {
+  list-style-type: none;
+}
+body .lander .hero {
+  display: flex;
+  margin: auto;
+  width: calc(100% - 96px);
+  height: calc(90% - px);
+  align-items: center;
+  justify-content: center;
 }
 body .horWrapper {
   overflow: hidden;
@@ -27,43 +79,26 @@ body .horWrapper .card-holder {
   display: flex;
   flex-wrap: nowrap;
 }
-
-.cards {
+body .horWrapper .card-holder .cards {
   display: flex;
-  height: 100vh;
-  min-width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   background: pink;
-  font-family: "Staatliches", cursive;
-  font-size: 30vw;
+  font-family: "field-gothic-xwide", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 10vw;
   flex-shrink: 0;
-  padding-right: 0.3em;
-  padding-left: 0.3em;
   color: #e10600;
   margin: 0;
 }
-
-.card-holder .cards:last-of-type {
+body .horWrapper .card-holder :nth-child(even) {
   background: #e1e1ff;
 }
-
-.lightBG {
-  background: #313143;
-}
-
-.h-20vh {
-  height: 20vh;
-}
-
-.h-30vh {
-  height: 30vh;
-}
-
-.h-50vh {
-  height: 0vh;
-}
-
-.h-100vh {
+body .footer {
+  display: flex;
   height: 100vh;
+  width: 100vw;
 }
 
 /*# sourceMappingURL=y.css.map */

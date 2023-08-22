@@ -1,13 +1,11 @@
+const lenis = new Lenis()
 
-const lenis = new lenis()
 
 lenis.on('scroll', ScrollTrigger.update)
 
-gsap.ticker.add((time) => {
-    lenis.raf(time * 1000)
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 1000)
 })
-
-gsap.ticker.lagSmoothing(0)
 
 
 
@@ -17,6 +15,7 @@ const cards = document.querySelector(".card-holder");
 function getScrollAmount() {
     let cardWidth = cards.scrollWidth;
     return -(cardWidth - window.innerWidth);
+    
 }
 
 const tween = gsap.to(cards, {
@@ -33,7 +32,9 @@ ScrollTrigger.create({
     animation: tween,
     scrub: 1,
     invalidateOnRefresh: true,
-    markers: true
+    markers: false
 });
+
+
 
 
