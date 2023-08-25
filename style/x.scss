@@ -22,15 +22,35 @@ $menu: "field-gothic" 9px violet;
 //remote classes
 .h1{
     display: flex;
-    font-size: x-large;
+}
+
+.center{
+    font-size: 1vw; 
 }
 
 
+// .superHero{
+//     width: 100%;
+//     height: 100%;
+//     background: no-repeat center/100% url("/statics/frame.svg");
+// }
+
+video{
+
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+    position:absolute;
+    height: 100vh;
+
+}
 
 body {
     margin: 0;
     background: #e1e1ff;
     color: purple;
+    text-transform: uppercase;
 
 
 
@@ -42,16 +62,19 @@ body {
 
         .menuWrapper {
             display: flex;
-            height: 10%;
+            height: 10vh;
             flex-direction: row;
-            color: #e10600;
-            font-family: "field-gothic-wide", sans-serif;
-            font-weight: 400;
+            font-family: "field-gothic-xwide", sans-serif;
+            font-weight: 700;
             font-style: normal;
+            font-size: clamp(14px,4vw,6vw);
+            flex-shrink: 0;
+            color: #e10600;
             
 
             nav {
                 display: flex;
+                height: 100%;
                 width: calc(100vw - 128px);
                 align-items: center;
                 justify-content: space-between;
@@ -86,16 +109,26 @@ body {
         .hero{
             display: flex;
             margin: auto;
-            width:calc(100% - 96px);
-            height:calc(90% - px);
+            width:calc(70% - 96px);
+            height: 50%; 
             align-items: center;
             justify-content: center;
+            z-index: -1;
 
-            // -webkit-box-shadow:inset 0px 0px 0px 3rem #e10600;
-            // -moz-box-shadow:inset 0px 0px 0px 3rem #e10600;
-            // box-shadow:inset 0px 0px 0px 3rem #e10600;
+            .cards{
+                display: flex;
+                min-height: 100vh;
+                width: 100%;
+                
+                font-family: "field-gothic-xwide", sans-serif;
+                font-weight: 700;
+                font-style: normal;
+                font-size: 10vw;
+                flex-shrink: 0;
+                color: #e10600;
+                margin: 0;
 
-
+            }
         }
     }
 
@@ -143,4 +176,4 @@ body {
         height: 100vh;
         width: 100vw;
     }
-}
+} 

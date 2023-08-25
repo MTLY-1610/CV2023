@@ -1,6 +1,5 @@
 const lenis = new Lenis()
 
-
 lenis.on('scroll', ScrollTrigger.update)
 
 gsap.ticker.add((time)=>{
@@ -29,6 +28,7 @@ ScrollTrigger.create({
     start: "top",
     end: () => `+=${getScrollAmount() * -1}`,
     pin: true,
+    // snap: 0.05,
     animation: tween,
     scrub: 1,
     invalidateOnRefresh: true,
