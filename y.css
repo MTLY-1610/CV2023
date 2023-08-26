@@ -35,7 +35,6 @@ video {
 body {
   margin: 0;
   background: #e1e1ff;
-  color: purple;
   text-transform: uppercase;
 }
 body .lander {
@@ -53,7 +52,6 @@ body .lander .menuWrapper {
   font-style: normal;
   font-size: clamp(14px, 4vw, 6vw);
   flex-shrink: 0;
-  color: #e10600;
 }
 body .lander .menuWrapper nav {
   display: flex;
@@ -97,7 +95,6 @@ body .lander .hero .cards {
   font-style: normal;
   font-size: 10vw;
   flex-shrink: 0;
-  color: #e10600;
   margin: 0;
 }
 body .horWrapper {
@@ -112,13 +109,12 @@ body .horWrapper .card-holder .cards {
   display: flex;
   min-height: 100vh;
   width: 100%;
-  background: pink;
+  background: lightgray;
   font-family: "field-gothic-xwide", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 10vw;
   flex-shrink: 0;
-  color: #e10600;
   margin: 0;
 }
 body .horWrapper .card-holder :nth-child(even) {
@@ -126,8 +122,47 @@ body .horWrapper .card-holder :nth-child(even) {
 }
 body .footer {
   display: flex;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
+}
+body .footer .cards {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  font-family: "field-gothic-xwide", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 10vw;
+  flex-shrink: 0;
+  margin: 0;
+}
+body .footer .cards .real-footer {
+  display: flex;
+  justify-content: space-between;
+  height: 20vh;
+  width: calc(100vw - 4rem);
+  padding: 2rem;
+  background-color: lightgray;
+}
+body .footer .cards .real-footer .footer-col {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: fit-content;
+  font-family: "input-mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.7rem;
+}
+body .footer .cards .real-footer .footer-col span {
+  display: flex;
+}
+body .footer .cards .last {
+  color: green;
+  text-align: right;
 }
 
 /*# sourceMappingURL=y.css.map */

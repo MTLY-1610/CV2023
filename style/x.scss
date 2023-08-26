@@ -20,13 +20,14 @@
 $menu: "field-gothic" 9px violet;
 
 //remote classes
-.h1{
+.h1 {
     display: flex;
 }
 
-.center{
-    font-size: 1vw; 
+.center {
+    font-size: 1vw;
 }
+
 
 
 // .superHero{
@@ -35,13 +36,13 @@ $menu: "field-gothic" 9px violet;
 //     background: no-repeat center/100% url("/statics/frame.svg");
 // }
 
-video{
+video {
 
     width: 100%;
     height: auto;
     object-fit: cover;
     z-index: -1;
-    position:absolute;
+    position: absolute;
     height: 100vh;
 
 }
@@ -49,7 +50,6 @@ video{
 body {
     margin: 0;
     background: #e1e1ff;
-    color: purple;
     text-transform: uppercase;
 
 
@@ -67,10 +67,9 @@ body {
             font-family: "field-gothic-xwide", sans-serif;
             font-weight: 700;
             font-style: normal;
-            font-size: clamp(14px,4vw,6vw);
+            font-size: clamp(14px, 4vw, 6vw);
             flex-shrink: 0;
-            color: #e10600;
-            
+
 
             nav {
                 display: flex;
@@ -79,53 +78,52 @@ body {
                 align-items: center;
                 justify-content: space-between;
                 padding: 4rem;
-                
 
-                .menu-items{
+
+                .menu-items {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                
-                 span {
-                    display: flex;
-                    flex-direction: column;
 
-                    ul{
-                        list-style-type: none;
+                    span {
+                        display: flex;
+                        flex-direction: column;
 
-                        li{
+                        ul {
                             list-style-type: none;
+
+                            li {
+                                list-style-type: none;
+                            }
                         }
+
+
                     }
-
-
                 }
-            }
 
 
             }
         }
-        .hero{
+
+        .hero {
             display: flex;
             margin: auto;
-            width:calc(70% - 96px);
-            height: 50%; 
+            width: calc(70% - 96px);
+            height: 50%;
             align-items: center;
             justify-content: center;
             z-index: -1;
 
-            .cards{
+            .cards {
                 display: flex;
                 min-height: 100vh;
                 width: 100%;
-                
                 font-family: "field-gothic-xwide", sans-serif;
                 font-weight: 700;
                 font-style: normal;
                 font-size: 10vw;
                 flex-shrink: 0;
-                color: #e10600;
                 margin: 0;
 
             }
@@ -153,13 +151,12 @@ body {
                 display: flex;
                 min-height: 100vh;
                 width: 100%;
-                background: pink;
+                background: lightgray;
                 font-family: "field-gothic-xwide", sans-serif;
                 font-weight: 700;
                 font-style: normal;
                 font-size: 10vw;
                 flex-shrink: 0;
-                color: #e10600;
                 margin: 0;
             }
 
@@ -173,7 +170,57 @@ body {
 
     .footer {
         display: flex;
+        flex-direction: column;
         height: 100vh;
         width: 100vw;
+
+        .cards {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            font-family: "field-gothic-xwide", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 10vw;
+            flex-shrink: 0;
+            margin: 0;
+
+            .real-footer {
+                display: flex;
+                justify-content: space-between;
+                height: 20vh;
+                width: calc(100vw - 4rem);
+                padding: 2rem;
+                background-color: lightgray;
+
+
+                .footer-col {
+                    display: flex;
+                    flex-direction: column;
+                    height: 50%;
+                    width: fit-content;
+                    
+                    font-family: "input-mono", monospace;
+                    font-weight: 700;
+                    font-style: normal;
+                    font-size: .7rem;
+                
+                    span{
+                        display: flex;
+                    }
+                }
+              
+            }
+            .last{
+                color:green;
+                text-align: right;
+            }
+        }
+
+
+
+
     }
-} 
+}
