@@ -155,14 +155,20 @@ body .footer .cards .real-footer .footer-col {
   font-family: "input-mono", monospace;
   font-weight: 700;
   font-style: normal;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 body .footer .cards .real-footer .footer-col span {
   display: flex;
 }
-body .footer .cards .last {
+body .footer .cards .last span {
   color: green;
-  text-align: right;
+  text-align: start;
+  justify-content: end;
+}
+body .footer .cards .mid span {
+  color: green;
+  text-align: start;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=y.css.map */
