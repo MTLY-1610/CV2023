@@ -26,9 +26,15 @@ $menu: "field-gothic" 9px violet;
 
 .center {
     font-size: 1vw;
+
 }
 
 
+
+// button {
+//     border: none;
+//     background: none;
+// }
 
 // .superHero{
 //     width: 100%;
@@ -42,27 +48,40 @@ video {
     height: auto;
     object-fit: cover;
     z-index: -1;
-    position: absolute;
-    height: 100vh;
+    height: 100%;
 
 }
-
+.data{
+    scale: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    // background: url(https://www.google.com/maps/place/Landsv%C3%A4gsgatan+23,+413+04+G%C3%B6teborg/@57.6973517,11.9522813,17z/data=!3m1!4b1!4m6!3m5!1s0x464ff341de319c37:0x8aa070a3ed09e6b3!8m2!3d57.6973517!4d11.9522813!16s%2Fg%2F11cs9cgl3j?entry=ttu);
+    background-size: cover;
+    width: 100%;
+    height: 90%;
+    z-index: 100;
+    background:pink 50%;
+}
 body {
     margin: 0;
     background: #e1e1ff;
     text-transform: uppercase;
 
-
+ 
 
     .lander {
         display: flex;
         flex-direction: column;
         height: 100vh;
         width: 100vw;
+        
 
         .menuWrapper {
             display: flex;
-            height: 10vh;
+            height: 10%;
             flex-direction: row;
             font-family: "field-gothic-xwide", sans-serif;
             font-weight: 700;
@@ -77,26 +96,22 @@ body {
                 width: calc(100vw - 128px);
                 align-items: center;
                 justify-content: space-between;
-                padding: 4rem;
+                padding: 0 4rem;
+                border-bottom: solid .1rem #000;
 
 
                 .menu-items {
+                    height: 52%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: space-around;
 
                     span {
                         display: flex;
                         flex-direction: column;
 
-                        ul {
-                            list-style-type: none;
 
-                            li {
-                                list-style-type: none;
-                            }
-                        }
 
 
                     }
@@ -107,26 +122,40 @@ body {
         }
 
         .hero {
+            
             display: flex;
-            margin: auto;
-            width: calc(70% - 96px);
-            height: 50%;
+            width: calc(100% - 4vw);
+            height: calc(90% - 4vh);
             align-items: center;
-            justify-content: center;
-            z-index: -1;
+            justify-content: flex-start;
+            padding: 2vh 2vw;
 
-            .cards {
+            .lander-cards {
                 display: flex;
-                min-height: 100vh;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                height: 60%;
                 width: 100%;
                 font-family: "field-gothic-xwide", sans-serif;
+                text-transform: none;
+                text-align: center;
                 font-weight: 700;
                 font-style: normal;
-                font-size: 10vw;
+                font-size: 3vw;
                 flex-shrink: 0;
-                margin: 0;
-
+                #text {
+                    font-size: 4vw;
+                    
+                }
+                #base{
+                    text-align: end;
+                    line-height: 1;
+                }
+               
+               
             }
+         
         }
     }
 
@@ -137,6 +166,7 @@ body {
             width: fit-content;
             display: flex;
             flex-wrap: nowrap;
+
 
             // :nth-child(even) {
             //     background: #e1e1ff;
@@ -151,13 +181,21 @@ body {
                 display: flex;
                 min-height: 100vh;
                 width: 100%;
-                background: lightgray;
+                // background: url(statics/frame.svg) center no-repeat;
+                // background-size: 90%;
                 font-family: "field-gothic-xwide", sans-serif;
                 font-weight: 700;
                 font-style: normal;
                 font-size: 10vw;
                 flex-shrink: 0;
                 margin: 0;
+
+                .cards-header {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+
+                }
             }
 
         }
@@ -189,11 +227,13 @@ body {
 
             .real-footer {
                 display: flex;
+                color: #e1e1ff;
+
                 justify-content: space-between;
                 height: 20vh;
                 width: calc(100vw - 4rem);
                 padding: 2rem;
-                background-color: lightgray;
+                background-color: #000;
 
 
                 .footer-col {
@@ -201,24 +241,25 @@ body {
                     flex-direction: column;
                     height: 50%;
                     width: fit-content;
-                    
+
                     font-family: "input-mono", monospace;
                     font-weight: 700;
                     font-style: normal;
                     font-size: .8rem;
-                
-                    span{
+
+                    span {
                         display: flex;
                     }
                 }
-              
+
             }
-            .last span{
-                color:green;
+
+            .last span {
                 text-align: start;
                 justify-content: end;
             }
-            .mid span{
+
+            .mid span {
                 justify-content: center;
             }
         }

@@ -1,3 +1,5 @@
+
+
 const lenis = new Lenis()
 
 lenis.on('scroll', ScrollTrigger.update)
@@ -37,4 +39,11 @@ ScrollTrigger.create({
 
 
 
+// var t = new SplitText("#text", {type:"chars", charsClass:"staggered-text"}); //type = which coponents to split apart - chars, words, and/or lines)
 
+// TweenLite.set("#text", {visibility:"visible"});
+
+// TweenMax.staggerFrom(t.chars, 2, {opacity:0, scale:1.2}, 0.3);  
+
+// // final digit is the stagger parameter ie delay between one character and the next
+ 
