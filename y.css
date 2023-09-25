@@ -19,10 +19,6 @@ h1 {
   display: flex;
 }
 
-.center {
-  font-size: 1vw;
-}
-
 video {
   width: 100%;
   height: auto;
@@ -51,6 +47,7 @@ body {
   text-transform: uppercase;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 body .lander {
   display: flex;
@@ -81,16 +78,17 @@ body .lander .menuWrapper nav {
 }
 body .lander .menuWrapper nav .menu-items {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  height: auto;
 }
 body .lander .menuWrapper nav .menu-items span {
   display: flex;
   height: 1 rem;
 }
-body .lander .menuWrapper nav .menu-items .center {
-  flex-direction: c;
+body .lander .menuWrapper nav .center {
+  height: 40%;
 }
 body .lander .marquee {
   display: flex;
@@ -131,20 +129,36 @@ body .lander .hero {
 body .lander .hero .lander-cards {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 90%;
-  width: 100%;
+  justify-content: flex-start;
+  height: calc(95% - 4rem);
+  width: calc(100% - 8.5rem);
+  background: #EEEFEF;
+  border: solid grey 0.25px;
+  border-radius: 3px;
   font-family: "input-mono", sans-serif;
   text-transform: none;
   font-weight: 700;
   font-style: normal;
   flex-shrink: 0;
-  font-size: 2.7rem;
+  font-size: 0.9rem;
+  padding: 2rem;
 }
-body .lander .hero .lander-cards #text {
-  text-align: left;
+body .lander .hero .lander-cards .hero-items {
+  display: flex;
+  flex-direction: column;
 }
-body .lander .hero .lander-cards #text h4 {
+body .lander .hero .lander-cards .hero-items .hero-title {
+  font-size: 1.7rem;
+}
+body .lander .hero .lander-cards #copy {
+  position: absolute;
+  rotate: -90deg;
+  font-size: 0.25em;
+  font-weight: 100;
+  bottom: 5rem;
+  right: 1.5rem;
+}
+body .lander .hero .lander-cards #copy h4 {
   text-align: right;
   line-height: 1;
 }
@@ -188,7 +202,7 @@ body .horWrapper .card-holder .cards .cards-header .title-right {
   flex-direction: column;
   padding: 1vh 2vw;
 }
-body .horWrapper .card-holder .cards .cards-main {
+body .horWrapper .card-holder .cards .cards {
   height: auto;
   width: 90%;
   display: flex;
@@ -200,7 +214,7 @@ body .horWrapper .card-holder .cards .cards-main {
   font-size: 4rem;
   padding: 0;
 }
-body .horWrapper .card-holder .cards .cards-main .cards-main-header {
+body .horWrapper .card-holder .cards .cards .cards-main-header {
   height: auto;
   width: 100%;
   display: flex;
@@ -252,7 +266,6 @@ body .footer .cards .real-footer .footer-col {
   font-weight: 700;
   font-style: normal;
   font-size: 0.8rem;
-  clip-path: polygon(0% 0px, 0px 0%, calc(100% - 50px) 0px, 100% 50px, 100% 100%, calc(100% - 0px) 100%, 50px 100%, 0px calc(100% - 50px));
 }
 body .footer .cards .real-footer .footer-col span {
   display: flex;

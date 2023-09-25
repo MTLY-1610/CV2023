@@ -4,8 +4,8 @@ const lenis = new Lenis()
 
 lenis.on('scroll', ScrollTrigger.update)
 
-gsap.ticker.add((time)=>{
-  lenis.raf(time * 1000)
+gsap.ticker.add((time) => {
+    lenis.raf(time * 1000)
 })
 
 
@@ -16,7 +16,7 @@ const cards = document.querySelector(".card-holder");
 function getScrollAmount() {
     let cardWidth = cards.scrollWidth;
     return -(cardWidth - window.innerWidth);
-    
+
 }
 
 const tween = gsap.to(cards, {
@@ -37,35 +37,7 @@ ScrollTrigger.create({
     markers: false
 });
 
-document.querySelectorAll(".menu-items").forEach((item) => {
-    item.addEventListener("mouseenter", function () {
-      gsap.set(this.querySelectorAll("span"), { opacity: 0 });
-      gsap.to(this.querySelectorAll("span"), {
-        opacity: .2,
-        duration: 0.1,
-        stagger: {
-          from: "0",
-          each: 0.02,
-        },
-        ease: "power2.out",
-      });
-    });
 
-    item.addEventListener("mouseleave", function () {
-      gsap.to(this.querySelectorAll("span"), {
-        opacity: 1,
-        duration: 0.1,
-        axis: "Y",
-        stagger: {
-          from: "0",
-          each: 0.02,
-        },
-        ease: "power2.in",
-      
-        
-      });
-    });
-  });
 
 // var t = new SplitText("#text", {type:"chars", charsClass:"staggered-text"}); //type = which coponents to split apart - chars, words, and/or lines)
 
@@ -74,4 +46,4 @@ document.querySelectorAll(".menu-items").forEach((item) => {
 // TweenMax.staggerFrom(t.chars, 2, {opacity:0, scale:1.2}, 0.3);  
 
 // // final digit is the stagger parameter ie delay between one character and the next
- 
+
