@@ -37,7 +37,35 @@ ScrollTrigger.create({
     markers: false
 });
 
+document.querySelectorAll(".menu-items").forEach((item) => {
+    item.addEventListener("mouseenter", function () {
+      gsap.set(this.querySelectorAll("span"), { opacity: 0 });
+      gsap.to(this.querySelectorAll("span"), {
+        opacity: .2,
+        duration: 0.1,
+        stagger: {
+          from: "0",
+          each: 0.02,
+        },
+        ease: "power2.out",
+      });
+    });
 
+    item.addEventListener("mouseleave", function () {
+      gsap.to(this.querySelectorAll("span"), {
+        opacity: 1,
+        duration: 0.1,
+        axis: "Y",
+        stagger: {
+          from: "0",
+          each: 0.02,
+        },
+        ease: "power2.in",
+      
+        
+      });
+    });
+  });
 
 // var t = new SplitText("#text", {type:"chars", charsClass:"staggered-text"}); //type = which coponents to split apart - chars, words, and/or lines)
 

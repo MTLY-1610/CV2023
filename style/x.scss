@@ -19,8 +19,10 @@
 
 $menu: "field-gothic" 9px violet;
 
+$border1: .8rem;
+
 //remote classes
-.h1 {
+h1 {
     display: flex;
 }
 
@@ -51,7 +53,8 @@ video {
     height: 100%;
 
 }
-.data{
+
+.data {
     scale: 0;
     position: absolute;
     top: 0;
@@ -63,31 +66,36 @@ video {
     width: 100%;
     height: 90%;
     z-index: 100;
-    background:pink 50%;
+    background: pink 50%;
 }
+
 body {
     margin: 0;
     background: #e1e1ff;
     text-transform: uppercase;
+    padding: 0;
+    margin: 0;
 
- 
+
+
 
     .lander {
         display: flex;
         flex-direction: column;
         height: 100vh;
         width: 100vw;
-        
+
 
         .menuWrapper {
             display: flex;
-            height: 10%;
+            height: calc(60px + 8rem);
             flex-direction: row;
-            font-family: "field-gothic-xwide", sans-serif;
+            font-family: "Russo-one", sans-serif;
             font-weight: 700;
             font-style: normal;
-            font-size: clamp(14px, 4vw, 6vw);
+            font-size: 1rem;
             flex-shrink: 0;
+
 
 
             nav {
@@ -95,67 +103,103 @@ body {
                 height: 100%;
                 width: calc(100vw - 128px);
                 align-items: center;
+                justify-content: center;
+                color: #000;
+                background: #e1e1ff;
                 justify-content: space-between;
                 padding: 0 4rem;
-                border-bottom: solid .1rem #000;
 
 
                 .menu-items {
-                    height: 52%;
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: row;
                     align-items: center;
-                    justify-content: space-around;
+                    justify-content: center;
 
                     span {
                         display: flex;
-                        flex-direction: column;
-
-
-
-
+                        height: 1 rem;
                     }
+
+                }
+                .menu-items .center{
+                    flex-direction: c;
                 }
 
 
             }
         }
 
-        .hero {
-            
+        .marquee {
             display: flex;
-            width: calc(100% - 4vw);
-            height: calc(90% - 4vh);
+            align-items: center;
+            position: relative;
+            width: 100%;
+            height: 5%;
+            overflow-x: hidden;
+            font-family: "field-gothic-xwide", sans-serif;
+            text-transform: none;
+            text-align: center;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 3vw;
+
+
+            .track {
+                position: absolute;
+                white-space: nowrap;
+                will-change: transform;
+                animation: marquee 29s linear infinite;
+            }
+
+            @keyframes marquee {
+                from {
+                    transform: translateX(0);
+                }
+
+                to {
+                    transform: translateX(-50%);
+                }
+            }
+        }
+
+        .hero {
+
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
             align-items: center;
             justify-content: flex-start;
-            padding: 2vh 2vw;
 
             .lander-cards {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                flex-direction: column;
-                height: 60%;
+                height: 90%;
                 width: 100%;
-                font-family: "field-gothic-xwide", sans-serif;
+                font-family: "input-mono", sans-serif;
                 text-transform: none;
-                text-align: center;
                 font-weight: 700;
                 font-style: normal;
-                font-size: 3vw;
                 flex-shrink: 0;
+                font-size: 2.7rem;
+
                 #text {
-                    font-size: 4vw;
-                    
+                    text-align: left;
+
+                    h4 {
+                        text-align: right;
+                        line-height: 1;
+                    }
+
                 }
-                #base{
-                    text-align: end;
-                    line-height: 1;
-                }
-               
-               
+
+
+
+
             }
-         
+
         }
     }
 
@@ -179,10 +223,10 @@ body {
 
             .cards {
                 display: flex;
-                min-height: 100vh;
-                width: 100%;
-                // background: url(statics/frame.svg) center no-repeat;
-                // background-size: 90%;
+                flex-direction: column;
+                align-items: center;
+                height: 100vh;
+                width: 100vw;
                 font-family: "field-gothic-xwide", sans-serif;
                 font-weight: 700;
                 font-style: normal;
@@ -191,9 +235,55 @@ body {
                 margin: 0;
 
                 .cards-header {
-                    height: 100%;
-                    width: 100%;
+                    height: auto;
+                    width: 90%;
                     display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0;
+
+                    .title {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 1vh 2vw;
+
+                    }
+
+                    .title-right {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 1vh 2vw;
+
+                    }
+
+                }
+
+                .cards-main {
+                    height: auto;
+                    width: 90%;
+                    display: flex;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    text-transform: none;
+                    font-size: 4rem;
+                    padding: 0;
+
+
+                    .cards-main-header {
+                        height: auto;
+                        width: 100%;
+                        display: flex;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        text-transform: none;
+                        padding: 1vh 2vw;
+
+                    }
 
                 }
             }
@@ -235,37 +325,59 @@ body {
                 padding: 2rem;
                 background-color: #000;
 
-
                 .footer-col {
+                    background-color: #e1e1ff ;
                     display: flex;
                     flex-direction: column;
                     height: 50%;
                     width: fit-content;
-
                     font-family: "input-mono", monospace;
                     font-weight: 700;
                     font-style: normal;
                     font-size: .8rem;
-
+                    clip-path: polygon(0% 0px,
+                            0px 0%,
+                            calc(100% - 50px) 0px,
+                            100% 50px,
+                            100% 100%,
+                            calc(100% - 0px) 100%,
+                            50px 100%,
+                            0px calc(100% - 50px));
                     span {
                         display: flex;
                     }
                 }
-
             }
 
-            .last span {
-                text-align: start;
-                justify-content: end;
+            .footer-col {
+                display: flex;
+                flex-direction: column;
+                height: 50%;
+                width: fit-content;
+
+                font-family: "input-mono", monospace;
+                font-weight: 700;
+                font-style: normal;
+                font-size: .8rem;
+
+                span {
+                    display: flex;
+                }
             }
 
-            .mid span {
-                justify-content: center;
-            }
         }
 
+        .last span {
+            text-align: start;
+            justify-content: end;
+        }
 
-
-
+        .mid span {
+            justify-content: center;
+        }
     }
+
+
+
+
 }

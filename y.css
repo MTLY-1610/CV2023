@@ -15,7 +15,7 @@
   pointer-events: none;
 }
 
-.h1 {
+h1 {
   display: flex;
 }
 
@@ -49,6 +49,8 @@ body {
   margin: 0;
   background: #e1e1ff;
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
 }
 body .lander {
   display: flex;
@@ -58,12 +60,12 @@ body .lander {
 }
 body .lander .menuWrapper {
   display: flex;
-  height: 10%;
+  height: calc(60px + 8rem);
   flex-direction: row;
-  font-family: "field-gothic-xwide", sans-serif;
+  font-family: "Russo-one", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: clamp(14px, 4vw, 6vw);
+  font-size: 1rem;
   flex-shrink: 0;
 }
 body .lander .menuWrapper nav {
@@ -71,49 +73,79 @@ body .lander .menuWrapper nav {
   height: 100%;
   width: calc(100vw - 128px);
   align-items: center;
+  justify-content: center;
+  color: #000;
+  background: #e1e1ff;
   justify-content: space-between;
   padding: 0 4rem;
-  border-bottom: solid 0.1rem #000;
 }
 body .lander .menuWrapper nav .menu-items {
-  height: 52%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 body .lander .menuWrapper nav .menu-items span {
   display: flex;
-  flex-direction: column;
+  height: 1 rem;
 }
-body .lander .hero {
-  display: flex;
-  width: calc(100% - 4vw);
-  height: calc(90% - 4vh);
-  align-items: center;
-  justify-content: flex-start;
-  padding: 2vh 2vw;
+body .lander .menuWrapper nav .menu-items .center {
+  flex-direction: c;
 }
-body .lander .hero .lander-cards {
+body .lander .marquee {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 60%;
+  position: relative;
   width: 100%;
+  height: 5%;
+  overflow-x: hidden;
   font-family: "field-gothic-xwide", sans-serif;
   text-transform: none;
   text-align: center;
   font-weight: 700;
   font-style: normal;
   font-size: 3vw;
+}
+body .lander .marquee .track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 29s linear infinite;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+body .lander .hero {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+body .lander .hero .lander-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  width: 100%;
+  font-family: "input-mono", sans-serif;
+  text-transform: none;
+  font-weight: 700;
+  font-style: normal;
   flex-shrink: 0;
+  font-size: 2.7rem;
 }
 body .lander .hero .lander-cards #text {
-  font-size: 4vw;
+  text-align: left;
 }
-body .lander .hero .lander-cards #base {
-  text-align: end;
+body .lander .hero .lander-cards #text h4 {
+  text-align: right;
   line-height: 1;
 }
 body .horWrapper {
@@ -126,8 +158,10 @@ body .horWrapper .card-holder {
 }
 body .horWrapper .card-holder .cards {
   display: flex;
-  min-height: 100vh;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
   font-family: "field-gothic-xwide", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -136,9 +170,46 @@ body .horWrapper .card-holder .cards {
   margin: 0;
 }
 body .horWrapper .card-holder .cards .cards-header {
-  height: 100%;
+  height: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+body .horWrapper .card-holder .cards .cards-header .title {
+  display: flex;
+  flex-direction: column;
+  padding: 1vh 2vw;
+}
+body .horWrapper .card-holder .cards .cards-header .title-right {
+  display: flex;
+  flex-direction: column;
+  padding: 1vh 2vw;
+}
+body .horWrapper .card-holder .cards .cards-main {
+  height: auto;
+  width: 90%;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: none;
+  font-size: 4rem;
+  padding: 0;
+}
+body .horWrapper .card-holder .cards .cards-main .cards-main-header {
+  height: auto;
   width: 100%;
   display: flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: none;
+  padding: 1vh 2vw;
 }
 body .horWrapper .card-holder :nth-child(even) {
   background: #e1e1ff;
@@ -172,6 +243,21 @@ body .footer .cards .real-footer {
   background-color: #000;
 }
 body .footer .cards .real-footer .footer-col {
+  background-color: #e1e1ff;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: fit-content;
+  font-family: "input-mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.8rem;
+  clip-path: polygon(0% 0px, 0px 0%, calc(100% - 50px) 0px, 100% 50px, 100% 100%, calc(100% - 0px) 100%, 50px 100%, 0px calc(100% - 50px));
+}
+body .footer .cards .real-footer .footer-col span {
+  display: flex;
+}
+body .footer .cards .footer-col {
   display: flex;
   flex-direction: column;
   height: 50%;
@@ -181,14 +267,14 @@ body .footer .cards .real-footer .footer-col {
   font-style: normal;
   font-size: 0.8rem;
 }
-body .footer .cards .real-footer .footer-col span {
+body .footer .cards .footer-col span {
   display: flex;
 }
-body .footer .cards .last span {
+body .footer .last span {
   text-align: start;
   justify-content: end;
 }
-body .footer .cards .mid span {
+body .footer .mid span {
   justify-content: center;
 }
 
