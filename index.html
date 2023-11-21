@@ -11,53 +11,20 @@
 
 <body>
 
-    <section draggable="false" class="lander ">
-        <!-- <div class="marquee">
-            <div class="track">
-                <div class="content">&nbsp;fire me hire me hire me hire me hire me hire me hire me ire me hire me hire
-                    me </div>
-            </div>
-        </div> -->
+    <section draggable="false" class="lander " id="top">
+        <div id="burger">[menu]</div>
 
-        <div class="menuWrapper">
-            <nav>
-                <div class="menu-items right">
-                    <span><img src="/statics/name.svg" alt="MATHIEU LARROUY" height="60px" draggable="false"></span>
-                </div>
-                <div class="menu-items center">
-                    <button id="nav-button"><span>CALL ME</span></button>
-                    <button id="time"><span>MAIL ME</span></button>
-                </div>
-                <div class="menu-items left">
-                    <span><img src="/statics/work.svg" alt="FRONT-END DEVELOPER" height="60px" draggable="false"></span>
-                </div>
-            </nav>
+        <div class="namewrapper">
+            <div class="name" id="first">MATHIEU</div>
+            <div class="lastname" id="last">LARROUY</div>
         </div>
-        <div class="hero">
+        <div class="text" id="pitch">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur a voluptatibus velit, adipisci nobis rem sed tenetur illum atque rerum eius explicabo asperiores magni quos in repellendus quia, molestias aspernatur?</div>
 
-            <div class="lander-cards">
-
-                <div class="hero-items">
-                    <div class="hero-title"></div>
-                    <div class="paragraph on">
-
-                    </div>
-                </div>
-                <div class="hero-items">
-                    <div class="paragraph on">
-                    </div>
-                </div>
-
-                <span id="copy">
-                    wooups
-                </span>
-            </div>
-        </div>
     </section>
 
     <section class="horWrapper ">
         <div class="card-holder">
-            <div class="cards about ">
+            <div class="cards about " id="one">
                 <div class="cards-header">
                     <div class="title">
                         #ME
@@ -72,9 +39,10 @@
 
                         </h5>
                     </div>
+
                 </div>
             </div>
-            <div class="cards tech ">
+            <div class="cards tech " id="two">
                 <div class="cards-header">
                     <div class="title">
                         #TECH
@@ -87,7 +55,7 @@
 
                 </div>
             </div>
-            <div class="cards ad ">
+            <div class="cards ad " id="three">
                 <div class="cards-header">
                     <div class="title">
                         #AD
@@ -100,11 +68,12 @@
                     <div class="border-main"></div>
 
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section class="footer ">
+    <section class="footer " id="foot">
         <div class="cards contact ">#footer
 
             <div class="real-footer">
@@ -119,22 +88,22 @@
 
                 </div>
 
-
+                <button id="next-button" onclick="lenis.scrollTo('#top', {duration:2})">
+                    <span id="copy">
+                        top
+                    </span>
+                </button>
             </div>
-
         </div>
-
-
     </section>
 
-
+    <script defer src="./nav/text.js"></script>
     <script defer src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script defer src="./nav/nav.js"></script>
-    <script defer src="./nav/lander.js"></script>
 
 
 </body>

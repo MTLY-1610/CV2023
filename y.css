@@ -15,55 +15,123 @@
   pointer-events: none;
 }
 
+@font-face {
+  font-family: "Astralaga";
+  src: url("fonts/Astralaga-Light.woff2") format("woff2"), url("fonts/Astralaga-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Astralaga";
+  src: url("fonts/Astralaga-SemiBold.woff2") format("woff2"), url("fonts/Astralaga-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Astralaga";
+  src: url("fonts/Astralaga-Regular.woff2") format("woff2"), url("fonts/Astralaga-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Astralaga";
+  src: url("fonts/Astralaga-Medium.woff2") format("woff2"), url("fonts/Astralaga-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Astralaga";
+  src: url("fonts/Astralaga-Bold.woff2") format("woff2"), url("fonts/Astralaga-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 h1 {
   display: flex;
 }
 
-video {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  z-index: -1;
-  height: 100%;
+#burger {
+  top: 4vh;
+  right: 48vw;
+  opacity: 0;
+  position: fixed;
+  align-self: auto;
+  font-family: "field-gothic-wide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1vw;
 }
 
-.data {
-  scale: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-size: cover;
-  width: 100%;
-  height: 90%;
-  z-index: 100;
-  background: pink 50%;
+#pitch {
+  opacity: 0;
+  z-index: -1;
+  position: fixed;
+  width: 92vw;
+  margin: 4vw;
+  display: flex;
+  text-align: start;
+  font-family: "Astralaga";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5vw;
 }
 
 body {
   margin: 0;
-  background: #e1e1ff;
+  background: #000;
   text-transform: uppercase;
+  color: #fff;
   padding: 0;
   margin: 0;
   overflow: hidden;
+  box-sizing: border-box;
 }
 body .lander {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   height: 100vh;
   width: 100vw;
+  scroll-snap-type: y mandatory;
+}
+body .lander .namewrapper {
+  width: 92vw;
+  height: 30vh;
+  margin: 4vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+body .lander .namewrapper .name {
+  opacity: 0;
+  display: flex;
+  font-family: "field-gothic-xwide", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 7vw;
+}
+body .lander .namewrapper .lastname {
+  opacity: 0;
+  display: flex;
+  font-family: "field-gothic-xwide", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 7vw;
 }
 body .lander .menuWrapper {
   display: flex;
   height: calc(60px + 4rem);
   flex-direction: row;
+  flex-shrink: 0;
   font-family: "Russo-one", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 1rem;
-  flex-shrink: 0;
 }
 body .lander .menuWrapper nav {
   display: flex;
@@ -79,7 +147,7 @@ body .lander .menuWrapper nav {
 body .lander .menuWrapper nav .menu-items {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-around;
   height: auto;
 }
@@ -87,55 +155,29 @@ body .lander .menuWrapper nav .menu-items span {
   display: flex;
   height: 1 rem;
 }
+body .lander .menuWrapper nav .menu-items .menu-baseline {
+  font-size: 0.6rem;
+  color: #BC13FE;
+  text-align: left;
+}
 body .lander .menuWrapper nav .center {
   height: 40%;
 }
-body .lander .marquee {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 5%;
-  overflow-x: hidden;
-  font-family: "field-gothic-xwide", sans-serif;
-  text-transform: none;
-  text-align: center;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 3vw;
-}
-body .lander .marquee .track {
-  position: absolute;
-  white-space: nowrap;
-  will-change: transform;
-  animation: marquee 29s linear infinite;
-}
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
 body .lander .hero {
   display: flex;
-  flex-direction: column;
   width: 100%;
   height: 100%;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 body .lander .hero .lander-cards {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: calc(95% - 4rem);
-  width: calc(100% - 8.5rem);
-  background: #EEEFEF;
-  border: solid grey 0.25px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  height: calc(92% - 4rem);
+  width: calc(100% - 10.5rem);
   border-radius: 3px;
-  font-family: "input-mono", sans-serif;
   text-transform: none;
   font-weight: 700;
   font-style: normal;
@@ -143,20 +185,39 @@ body .lander .hero .lander-cards {
   font-size: 0.9rem;
   padding: 2rem;
 }
-body .lander .hero .lander-cards .hero-items {
+body .lander .hero .lander-cards .paragraph-main {
   display: flex;
   flex-direction: column;
+  font-family: "cofo-peshka-variable", sans-serif;
+  font-size: clamp(1vw, 3vw, 3vh);
+  color: #BC13FE;
+}
+body .lander .hero .lander-cards .hero-items {
+  width: calc(60% - 10.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "cofo-peshka-variable", sans-serif;
+  padding: 1rem;
+  background-size: auto;
 }
 body .lander .hero .lander-cards .hero-items .hero-title {
+  display: flex;
   font-size: 1.7rem;
+}
+body .lander .hero .lander-cards .hero-items .paragraph {
+  display: none;
+  font-size: clamp(1vw, 3vw, 3vh);
+  color: #BC13FE;
 }
 body .lander .hero .lander-cards #copy {
   position: absolute;
   rotate: -90deg;
-  font-size: 0.25em;
+  font-size: 0.7rem;
   font-weight: 100;
-  bottom: 5rem;
-  right: 1.5rem;
+  bottom: 6rem;
+  right: 2.4rem;
 }
 body .lander .hero .lander-cards #copy h4 {
   text-align: right;
@@ -164,11 +225,13 @@ body .lander .hero .lander-cards #copy h4 {
 }
 body .horWrapper {
   overflow: hidden;
+  color: #fff;
 }
 body .horWrapper .card-holder {
   width: fit-content;
   display: flex;
   flex-wrap: nowrap;
+  scroll-snap-type: y mandatory;
 }
 body .horWrapper .card-holder .cards {
   display: flex;
@@ -182,6 +245,7 @@ body .horWrapper .card-holder .cards {
   font-size: 10vw;
   flex-shrink: 0;
   margin: 0;
+  scroll-snap-align: center;
 }
 body .horWrapper .card-holder .cards .cards-header {
   height: auto;
@@ -225,9 +289,6 @@ body .horWrapper .card-holder .cards .cards .cards-main-header {
   text-transform: none;
   padding: 1vh 2vw;
 }
-body .horWrapper .card-holder :nth-child(even) {
-  background: #e1e1ff;
-}
 body .footer {
   display: flex;
   flex-direction: column;
@@ -270,18 +331,14 @@ body .footer .cards .real-footer .footer-col {
 body .footer .cards .real-footer .footer-col span {
   display: flex;
 }
-body .footer .cards .footer-col {
-  display: flex;
-  flex-direction: column;
-  height: 50%;
-  width: fit-content;
-  font-family: "input-mono", monospace;
+body .footer .cards .real-footer #next-button {
+  border: none;
+  background: none;
+  color: pink;
+  font-family: "field-gothic-xwide", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 0.8rem;
-}
-body .footer .cards .footer-col span {
-  display: flex;
+  font-size: 10vw;
 }
 body .footer .last span {
   text-align: start;

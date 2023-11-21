@@ -16,6 +16,51 @@
 .lenis.lenis-scrolling iframe {
     pointer-events: none;
 }
+@font-face {
+    font-family: 'Astralaga';
+    src: url('fonts/Astralaga-Light.woff2') format('woff2'),
+        url('fonts/Astralaga-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Astralaga';
+    src: url('fonts/Astralaga-SemiBold.woff2') format('woff2'),
+        url('fonts/Astralaga-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Astralaga';
+    src: url('fonts/Astralaga-Regular.woff2') format('woff2'),
+        url('fonts/Astralaga-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Astralaga';
+    src: url('fonts/Astralaga-Medium.woff2') format('woff2'),
+        url('fonts/Astralaga-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Astralaga';
+    src: url('fonts/Astralaga-Bold.woff2') format('woff2'),
+        url('fonts/Astralaga-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 $menu: "field-gothic" 9px violet;
 
@@ -26,161 +71,99 @@ h1 {
     display: flex;
 }
 
-
-
-
-
-// button {
-//     border: none;
-//     background: none;
-// }
-
-// .superHero{
-//     width: 100%;
-//     height: 100%;
-//     background: no-repeat center/100% url("/statics/frame.svg");
-// }
-
-video {
-
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    z-index: -1;
-    height: 100%;
-
+#burger{
+    top: 4vh;
+    right: 48vw;
+    opacity: 0;
+    position:fixed;
+    align-self: auto;
+    font-family: "field-gothic-wide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
 }
 
-.data {
-    scale: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    // background: url(https://www.google.com/maps/place/Landsv%C3%A4gsgatan+23,+413+04+G%C3%B6teborg/@57.6973517,11.9522813,17z/data=!3m1!4b1!4m6!3m5!1s0x464ff341de319c37:0x8aa070a3ed09e6b3!8m2!3d57.6973517!4d11.9522813!16s%2Fg%2F11cs9cgl3j?entry=ttu);
-    background-size: cover;
-    width: 100%;
-    height: 90%;
-    z-index: 100;
-    background: pink 50%;
-}
+
+
 
 body {
     margin: 0;
-    background: #e1e1ff;
+    background: #000;
     text-transform: uppercase;
+    color: #fff;
     padding: 0;
     margin: 0;
     overflow: hidden;
-
-
-
+    box-sizing: border-box;
 
     .lander {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         height: 100vh;
         width: 100vw;
+        scroll-snap-type: y mandatory;
 
 
-        .menuWrapper {
+        .namewrapper {
+            width: 92vw;
+            height: 30vh;
+            margin: 4vw;
             display: flex;
-            height: calc(60px + 4rem);
             flex-direction: row;
-            font-family: "Russo-one", sans-serif;
-            font-weight: 700;
-            font-style: normal;
-            font-size: 1rem;
-            flex-shrink: 0;
+            align-items:center;
+            justify-content: space-between;
 
-
-
-            nav {
+            .name {
+                opacity: 0;
                 display: flex;
-                height: 100%;
-                width: calc(100vw - 4rem);
-                align-items: center;
-                justify-content: center;
-                color: #000;
-                background: #e1e1ff;
-                justify-content: space-between;
-                padding: 0 2rem;
+                font-family: "field-gothic-xwide", sans-serif;
+                font-weight: 700;
+                font-style: normal;
+                font-size: 7vw;
+            }
 
-
-                .menu-items {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: space-around;
-                    height: auto;
-
-                    span {
-                        display: flex;
-                        height: 1 rem;
-                    }
-
-                }
-                .center{
-                    height: 40%;
-                }
-
-
+            .lastname {
+                opacity: 0;
+                display: flex;
+                font-family: "field-gothic-xwide", sans-serif;
+                font-weight: 700;
+                font-style: normal;
+                font-size: 7vw;
+            }
+            #pitch{
+                opacity: 0;
+                z-index: -1;
+                position:fixed;
+                width: 92vw;
+                margin: 4vw;
+                display: flex;
+                text-align:start;
+                font-family: 'Astralaga';
+                font-weight: 400;
+                font-style: normal;
+                font-size: 5vw;
+            
             }
         }
 
-        // .marquee {
-        //     display: flex;
-        //     align-items: center;
-        //     position: relative;
-        //     width: 100%;
-        //     height: 5%;
-        //     overflow-x: hidden;
-        //     font-family: "", sans-serif;
-        //     text-transform: none;
-        //     text-align: center;
-        //     font-weight: 700;
-        //     font-style: normal;
-        //     font-size: 1vw;
-
-
-            .track {
-                position: absolute;
-                white-space: nowrap;
-                will-change: transform;
-                animation: marquee 29s linear infinite;
-            }
-
-            @keyframes marquee {
-                from {
-                    transform: translateX(0);
-                }
-
-                to {
-                    transform: translateX(-50%);
-                }
-            }
-        }
+   
 
         .hero {
-
             display: flex;
-            flex-direction: column;
             width: 100%;
             height: 100%;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
 
             .lander-cards {
                 display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                height: calc(95% - 4rem);
-                width: calc(100% - 8.5rem);
-                background: #EEEFEF;
-                border: solid grey .25px;
+                flex-direction: column;
+                align-items: flex-start;
+                flex-wrap: nowrap;
+                height: calc(92% - 4rem);
+                width: calc(100% - 10.5rem);
                 border-radius: 3px;
-                font-family: "input-mono", sans-serif;
                 text-transform: none;
                 font-weight: 700;
                 font-style: normal;
@@ -188,47 +171,15 @@ body {
                 font-size: .9rem;
                 padding: 2rem;
 
-                .hero-items{
+                .paragraph-main {
                     display: flex;
                     flex-direction: column;
-                    
-
-
-                    .hero-title{
-                        font-size: 1.7rem;
-                    }
-
-                    .paragraph{
-         
-                        
-
-                    }
-                    .hero-title:hover + .paragraph{
-                  
-                        
-                    }
-
+                    font-family: "cofo-peshka-variable", sans-serif;
+                    font-size: clamp(1vw, 3vw, 3vh);
+                    color: #BC13FE;
+                    // border-left:solid 1px #000;
 
                 }
-
-                #copy {
-                    position: absolute;
-                    rotate: -90deg;
-                    font-size: .25em;
-                    font-weight: 100;
-                    bottom: 5rem;
-                    right: 1.5rem;
-
-                    h4 {
-                        text-align: right;
-                        line-height: 1;
-                    }
-
-                }
-
-
-
-
             }
 
         }
@@ -236,17 +187,16 @@ body {
 
     .horWrapper {
         overflow: hidden;
+        color: #fff;
 
         .card-holder {
             width: fit-content;
             display: flex;
             flex-wrap: nowrap;
-
-
+            scroll-snap-type: y mandatory;
             // :nth-child(even) {
             //     background: #e1e1ff;
             // }
-
             // .card-holder .cards:last-of-type {
             //     background: #e1e1ff;
             // }
@@ -264,6 +214,7 @@ body {
                 font-size: 10vw;
                 flex-shrink: 0;
                 margin: 0;
+                scroll-snap-align: center;
 
                 .cards-header {
                     height: auto;
@@ -316,16 +267,16 @@ body {
 
                     }
 
-                    
+
 
                 }
             }
 
         }
 
-        .card-holder :nth-child(even) {
-            background: #e1e1ff;
-        }
+        // .card-holder :nth-child(even) {
+        //     background: #e1e1ff;
+        // }
 
     }
 
@@ -359,7 +310,7 @@ body {
                 background-color: #000;
 
                 .footer-col {
-                    background-color: #e1e1ff ;
+                    background-color: #e1e1ff;
                     display: flex;
                     flex-direction: column;
                     height: 50%;
@@ -368,27 +319,24 @@ body {
                     font-weight: 700;
                     font-style: normal;
                     font-size: .8rem;
+
                     span {
                         display: flex;
                     }
                 }
-            }
 
-            .footer-col {
-                display: flex;
-                flex-direction: column;
-                height: 50%;
-                width: fit-content;
-
-                font-family: "input-mono", monospace;
-                font-weight: 700;
-                font-style: normal;
-                font-size: .8rem;
-
-                span {
-                    display: flex;
+                #next-button {
+                    border: none;
+                    background: none;
+                    color: pink;
+                    font-family: "field-gothic-xwide", sans-serif;
+                    font-weight: 700;
+                    font-style: normal;
+                    font-size: 10vw;
                 }
             }
+
+
 
         }
 

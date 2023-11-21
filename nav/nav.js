@@ -9,7 +9,7 @@ gsap.ticker.add((time) => {
 })
 
 
-
+ScrollTrigger.update() 
 
 const cards = document.querySelector(".card-holder");
 
@@ -38,12 +38,10 @@ ScrollTrigger.create({
 });
 
 
+gsap.to("#first, #last", {opacity:1, duration:5});
+gsap.to("#first, #last", {y:"-45vh",fontSize:"2vw", duration:3, delay:5});
+gsap.to("#burger", {opacity:1, duration:1, delay:8});
+gsap.to("#pitch", {opacity:1, duration:1, zIndex:10, delay:8});
 
-// var t = new SplitText("#text", {type:"chars", charsClass:"staggered-text"}); //type = which coponents to split apart - chars, words, and/or lines)
 
-// TweenLite.set("#text", {visibility:"visible"});
-
-// TweenMax.staggerFrom(t.chars, 2, {opacity:0, scale:1.2}, 0.3);  
-
-// // final digit is the stagger parameter ie delay between one character and the next
 
