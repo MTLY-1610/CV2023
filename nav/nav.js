@@ -38,10 +38,10 @@ ScrollTrigger.create({
 });
 
 
-gsap.to("#first, #last", {opacity:1, duration:5});
-gsap.to("#first, #last", {y:"-45vh",fontSize:"2vw", duration:3, delay:5});
-gsap.to("#burger", {opacity:1, duration:1, delay:8});
-gsap.to("#pitch", {opacity:1, duration:1, zIndex:10, delay:8});
+gsap.to("#name", {opacity:1, duration:1});
+gsap.to("#namewrapper", {y:"-45vh",fontSize:"2vw", duration:3, delay:1});
+gsap.to("#burger", {opacity:1, duration:2, delay:4});
+gsap.to("#pitch", {opacity:1, height: "66vh", duration:2, delay:4});
 
 
 

@@ -50,36 +50,6 @@
   font-style: normal;
   font-display: swap;
 }
-h1 {
-  display: flex;
-}
-
-#burger {
-  top: 4vh;
-  right: 48vw;
-  opacity: 0;
-  position: fixed;
-  align-self: auto;
-  font-family: "field-gothic-wide", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1vw;
-}
-
-#pitch {
-  opacity: 0;
-  z-index: -1;
-  position: fixed;
-  width: 92vw;
-  margin: 4vw;
-  display: flex;
-  text-align: start;
-  font-family: "Astralaga";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 5vw;
-}
-
 body {
   margin: 0;
   background: #000;
@@ -99,129 +69,43 @@ body .lander {
   scroll-snap-type: y mandatory;
 }
 body .lander .namewrapper {
+  position: fixed;
   width: 92vw;
-  height: 30vh;
+  height: auto;
   margin: 4vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
-body .lander .namewrapper .name {
-  opacity: 0;
   display: flex;
   font-family: "field-gothic-xwide", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 7vw;
 }
-body .lander .namewrapper .lastname {
+body .lander .namewrapper #name {
   opacity: 0;
-  display: flex;
-  font-family: "field-gothic-xwide", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 7vw;
 }
-body .lander .menuWrapper {
+body .lander .namewrapper #burger {
   display: flex;
-  height: calc(60px + 4rem);
-  flex-direction: row;
-  flex-shrink: 0;
-  font-family: "Russo-one", sans-serif;
-  font-weight: 700;
+  opacity: 0;
+  font-family: "field-gothic-wide", sans-serif;
+  font-weight: 400;
   font-style: normal;
-  font-size: 1rem;
+  font-size: 1vw;
 }
-body .lander .menuWrapper nav {
-  display: flex;
-  height: 100%;
-  width: calc(100vw - 4rem);
+body .lander #pitch {
+  height: 66vh;
+  opacity: 0;
+  width: 92vw;
+  margin: 10vh 4vw;
+  text-align: center;
   align-items: center;
   justify-content: center;
-  color: #000;
-  background: #e1e1ff;
-  justify-content: space-between;
-  padding: 0 2rem;
-}
-body .lander .menuWrapper nav .menu-items {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-around;
-  height: auto;
-}
-body .lander .menuWrapper nav .menu-items span {
-  display: flex;
-  height: 1 rem;
-}
-body .lander .menuWrapper nav .menu-items .menu-baseline {
-  font-size: 0.6rem;
-  color: #BC13FE;
-  text-align: left;
-}
-body .lander .menuWrapper nav .center {
-  height: 40%;
-}
-body .lander .hero {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-body .lander .hero .lander-cards {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  height: calc(92% - 4rem);
-  width: calc(100% - 10.5rem);
-  border-radius: 3px;
-  text-transform: none;
-  font-weight: 700;
+  font-family: "Astralaga";
+  font-weight: 400;
   font-style: normal;
-  flex-shrink: 0;
-  font-size: 0.9rem;
-  padding: 2rem;
-}
-body .lander .hero .lander-cards .paragraph-main {
-  display: flex;
-  flex-direction: column;
-  font-family: "cofo-peshka-variable", sans-serif;
-  font-size: clamp(1vw, 3vw, 3vh);
-  color: #BC13FE;
-}
-body .lander .hero .lander-cards .hero-items {
-  width: calc(60% - 10.5rem);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  font-family: "cofo-peshka-variable", sans-serif;
-  padding: 1rem;
-  background-size: auto;
-}
-body .lander .hero .lander-cards .hero-items .hero-title {
-  display: flex;
-  font-size: 1.7rem;
-}
-body .lander .hero .lander-cards .hero-items .paragraph {
-  display: none;
-  font-size: clamp(1vw, 3vw, 3vh);
-  color: #BC13FE;
-}
-body .lander .hero .lander-cards #copy {
-  position: absolute;
-  rotate: -90deg;
-  font-size: 0.7rem;
-  font-weight: 100;
-  bottom: 6rem;
-  right: 2.4rem;
-}
-body .lander .hero .lander-cards #copy h4 {
-  text-align: right;
-  line-height: 1;
+  font-size: 4vw;
 }
 body .horWrapper {
   overflow: hidden;
@@ -237,7 +121,7 @@ body .horWrapper .card-holder .cards {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 70vh;
   width: 100vw;
   font-family: "field-gothic-xwide", sans-serif;
   font-weight: 700;
@@ -255,6 +139,7 @@ body .horWrapper .card-holder .cards .cards-header {
   align-items: center;
   justify-content: space-between;
   padding: 0;
+  margin-top: 5vh;
 }
 body .horWrapper .card-holder .cards .cards-header .title {
   display: flex;
@@ -332,20 +217,14 @@ body .footer .cards .real-footer .footer-col span {
   display: flex;
 }
 body .footer .cards .real-footer #next-button {
+  color: #fff;
   border: none;
   background: none;
-  color: pink;
-  font-family: "field-gothic-xwide", sans-serif;
-  font-weight: 700;
+  display: flex;
+  font-family: "field-gothic-wide", sans-serif;
+  font-weight: 400;
   font-style: normal;
-  font-size: 10vw;
-}
-body .footer .last span {
-  text-align: start;
-  justify-content: end;
-}
-body .footer .mid span {
-  justify-content: center;
+  font-size: 1vw;
 }
 
 /*# sourceMappingURL=y.css.map */
