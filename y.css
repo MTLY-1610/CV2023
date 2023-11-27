@@ -50,6 +50,13 @@
   font-style: normal;
   font-display: swap;
 }
+button {
+  text-decoration: none;
+  border: 0;
+  background: none;
+  color: #fff;
+}
+
 body {
   margin: 0;
   background: #000;
@@ -85,6 +92,7 @@ body .lander .namewrapper {
 }
 body .lander .namewrapper #name {
   opacity: 0;
+  transition: 1s;
 }
 body .lander .namewrapper #burger {
   display: flex;
@@ -92,7 +100,8 @@ body .lander .namewrapper #burger {
   font-family: "field-gothic-wide", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1vw;
+  font-size: 0.5vw;
+  text-decoration: none;
 }
 body .lander #pitch {
   height: 66vh;
@@ -181,7 +190,7 @@ body .footer {
   width: 100vw;
 }
 body .footer .cards {
-  height: 100%;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -192,6 +201,7 @@ body .footer .cards {
   font-size: 10vw;
   flex-shrink: 0;
   margin: 0;
+  margin-top: 5vh;
 }
 body .footer .cards .real-footer {
   display: flex;
@@ -224,7 +234,8 @@ body .footer .cards .real-footer #next-button {
   font-family: "field-gothic-wide", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1vw;
+  font-size: 0.5vw;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=y.css.map */
