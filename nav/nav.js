@@ -39,9 +39,9 @@ ScrollTrigger.create({
     markers: false
 });
 
-gsap.to(".lander", { opacity: 1,  duration: 1, ease: "power2.in"});
-gsap.to(".lander", { opacity: 0,  duration: 1, delay: 2, ease: "power2.in"});
-gsap.to(".menu", { opacity: 1, x: -30, duration: .1, ease: Bounce.in, delay: 3});
+gsap.to(".lander", { opacity: 1,delay: 0.5,  duration: 1.5, ease: "power0.in"});
+gsap.to(".lander", { opacity: 0,  duration: 1.5, delay: 2.5, ease: "power2.out"});
+gsap.to(".menu", { opacity: 1, x: -30, duration: 1, ease: Bounce.in, delay: 5.5});
 
 
 // gsap.to(".pitch", { opacity: 0, duration: 0, delay: 0});
