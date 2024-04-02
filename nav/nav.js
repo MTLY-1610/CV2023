@@ -1,4 +1,6 @@
+const { Bounce } = require("gsap");
 
+console.clear();
 
 const lenis = new Lenis()
 
@@ -11,7 +13,7 @@ gsap.ticker.add((time) => {
 
 ScrollTrigger.update() 
 
-const cards = document.querySelector(".card-holder");
+let cards = document.querySelector(".card-holder");
 
 function getScrollAmount() {
     let cardWidth = cards.scrollWidth;
@@ -19,7 +21,7 @@ function getScrollAmount() {
 
 }
 
-const tween = gsap.to(cards, {
+let tween = gsap.to(cards, {
     x: getScrollAmount,
     duration: 3,
     ease: "none"
@@ -38,10 +40,13 @@ ScrollTrigger.create({
 });
 
 
-gsap.to("#name", {opacity:1, ease: "in", duration:5, delay:.5});
-gsap.to("#namewrapper", {y:"-45vh",fontSize:"2vw", duration:3, delay:5});
-gsap.to("#burger", {opacity:1, duration:2, delay:9});
-gsap.to("#pitch", {opacity:1, height: "66vh", duration:2, delay:10});
+gsap.to(".lander", { opacity: 0,  duration: 1, delay: 5, ease: "power2.in"});
+gsap.to(".menu", { opacity: 1, x: -30, duration: .1, ease: Bounce.in, delay: 6});
+gsap.to(".horWrapper", { opacity: 0 });
 
+gsap.to(".pitch", { opacity: 0, duration: 0, delay: 0});
+// gsap.to("#namewrapper", { y: "-30vh", opacity: 1, fontSize: "2vw", ease: "power1.out", duration: .35, delay: 5 });
+// gsap.to("#burger", { opacity: 1, duration: 2, delay: 9 });
+// gsap.to("#pitch", { opacity: 1, height: "66vh", duration: 2, delay: 10 });
 
 
