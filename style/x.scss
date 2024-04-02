@@ -63,14 +63,6 @@
 
 
 
-
-//remote classes
-
-
-
-
-//body
-
 * {
     margin: 0;
     padding: 0;
@@ -80,16 +72,14 @@
 
 
 body {
-    height: 100vh;
-    background: #fff;
-    color: #000;
+
     overflow: hidden;
 
     .menu {
         display: flex;
         position: fixed;
         top: 0;
-        width: 100%;
+        width: 100vw;
         padding-left: 4vw;
         padding-right: 4vw;
         height: 8vh;
@@ -110,6 +100,9 @@ body {
     }
 
     .lander {
+        background: #fff;
+        color: #000;
+        opacity: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -174,34 +167,31 @@ body {
     //     }
     // }
     .horWrapper {
-        overflow: hidden;
-        color: #fff;
+        background-color: pink;
+        height: 100vh;
+        display: flex;
+        color: #000;
 
         .card-holder {
             width: fit-content;
             display: flex;
             flex-wrap: nowrap;
             scroll-snap-type: y mandatory;
-            // :nth-child(even) {
-            //     background: #e1e1ff;
-            // }
-            // .card-holder .cards:last-of-type {
-            // }
-
 
             .cards {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                flex-shrink: 0;
+                margin: 0;
+                scroll-snap-align: center;
                 height: 90vh;
                 width: 100vw;
                 font-family: "field-gothic-xwide", sans-serif;
                 font-weight: 700;
                 font-style: normal;
                 font-size: 10vw;
-                flex-shrink: 0;
-                margin: 0;
-                scroll-snap-align: center;
+    
 
                 .cards-header {
                     height: auto;
@@ -286,7 +276,7 @@ body {
 
             .real-footer {
                 display: flex;
-                color: #e1e1ff;
+                color: #000;
                 align-items: center;
                 justify-content: space-around;
                 height: 20vh;

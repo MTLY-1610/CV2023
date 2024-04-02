@@ -1,4 +1,4 @@
-const { Bounce } = require("gsap");
+// const { Bounce } = require("gsap");
 
 console.clear();
 
@@ -39,12 +39,12 @@ ScrollTrigger.create({
     markers: false
 });
 
+gsap.to(".lander", { opacity: 1,  duration: 1, ease: "power2.in"});
+gsap.to(".lander", { opacity: 0,  duration: 1, delay: 2, ease: "power2.in"});
+gsap.to(".menu", { opacity: 1, x: -30, duration: .1, ease: Bounce.in, delay: 3});
 
-gsap.to(".lander", { opacity: 0,  duration: 1, delay: 5, ease: "power2.in"});
-gsap.to(".menu", { opacity: 1, x: -30, duration: .1, ease: Bounce.in, delay: 6});
-gsap.to(".horWrapper", { opacity: 0 });
 
-gsap.to(".pitch", { opacity: 0, duration: 0, delay: 0});
+// gsap.to(".pitch", { opacity: 0, duration: 0, delay: 0});
 // gsap.to("#namewrapper", { y: "-30vh", opacity: 1, fontSize: "2vw", ease: "power1.out", duration: .35, delay: 5 });
 // gsap.to("#burger", { opacity: 1, duration: 2, delay: 9 });
 // gsap.to("#pitch", { opacity: 1, height: "66vh", duration: 2, delay: 10 });
