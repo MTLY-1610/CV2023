@@ -62,8 +62,8 @@ body {
 body .menu {
   display: flex;
   position: fixed;
-  top: 0;
   color: #000;
+  top: 0;
   width: 92vw;
   padding: 0 4vw 0 4vw;
   height: 6vw;
@@ -75,6 +75,7 @@ body .menu {
   align-items: center;
   z-index: 10;
   left: 30px;
+  mix-blend-mode: difference;
 }
 body .lander {
   overflow: hidden;
@@ -113,9 +114,15 @@ body .lander .pitch {
   opacity: 0;
   color: #000;
   transition: 1s;
+  height: 50vh;
+  width: 92vw;
+  margin: 10vh 4vw;
+  flex-direction: row;
+  opacity: 0;
+  height: 50vh;
+  width: 92vw;
 }
 body .horWrapper {
-  background-color: pink;
   height: 100vh;
   display: flex;
   color: #000;
@@ -171,6 +178,9 @@ body .horWrapper .card-holder .cards .cards {
   text-transform: none;
   font-size: 4rem;
   padding: 0;
+}
+body .horWrapper .card-holder .cards .cards .cards:nth-child(odd) {
+  background-color: #000;
 }
 body .horWrapper .card-holder .cards .cards .cards-main-header {
   height: auto;
