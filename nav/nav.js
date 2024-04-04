@@ -1,7 +1,5 @@
 // const { Bounce } = require("gsap");
 
-console.clear();
-
 const lenis = new Lenis()
 
 lenis.on('scroll', ScrollTrigger.update)
@@ -41,7 +39,7 @@ ScrollTrigger.create({
 
 gsap.to(".lander", { opacity: 1,delay: 0.5,  duration: 1.5, ease: "power0.inout"});
 gsap.to(".lander", { opacity: 0,  duration: 1.5, delay: 2.5, ease: "power2.out"});
-gsap.to(".menu", { opacity: 1, x: -30, duration: .5, ease: Bounce.in, delay: 5.5});
+gsap.to(".menu", { opacity: 1, x: -30, duration: .2, ease: Bounce.in, delay: 3.75});
 gsap.to(".pitch", { opacity: 1, duration: .5, delay: 5.5});
 
 
