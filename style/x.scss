@@ -61,7 +61,9 @@
     font-display: swap;
 }
 
-
+#contact {
+    flex-direction: row;
+}
 
 * {
     margin: 0;
@@ -76,11 +78,12 @@ body {
 
 
     .menu {
+
         display: flex;
         position: fixed;
         color: #000;
         top: 0;
-        width: 92vw;
+        width: 100vw;
         padding: 0 4vw 0 4vw;
         height: 6vw;
         opacity: 0;
@@ -90,7 +93,6 @@ body {
         justify-content: space-between;
         align-items: center;
         z-index: 10;
-        left: 30px;
 
     }
 
@@ -104,7 +106,6 @@ body {
         justify-content: center;
         height: 100vh;
         width: 100vw;
-        scroll-snap-type: y mandatory;
 
         .namewrapper {
             width: 92vw;
@@ -121,8 +122,8 @@ body {
             font-style: normal;
             font-size: 7vw;
 
-  
         }
+
         .pitch {
             opacity: 0;
             display: flex;
@@ -137,7 +138,7 @@ body {
             font-size: 4vw;
             color: #000;
             transition: 1s;
-    
+
         }
 
     }
@@ -147,7 +148,6 @@ body {
     .horWrapper {
         height: 100vh;
         display: flex;
-        background-color: pink;
         color: #000;
 
         .card-holder {
@@ -259,6 +259,29 @@ body {
             flex-shrink: 0;
             margin: 0;
             margin-top: 5vh;
+
+            .footerHeader {
+                display: flex;
+                height: max-content;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+
+
+                .hash {}
+
+                .num {
+                    padding: 10vh 0 0 0;
+                    font-family: "input-mono", monospace;
+                    font-weight: 400;
+                    font-size: medium;
+                }
+
+
+
+
+            }
+
 
             .real-footer {
                 display: flex;
