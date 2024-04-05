@@ -75,7 +75,6 @@ body .menu {
   align-items: center;
   z-index: 10;
   left: 30px;
-  mix-blend-mode: difference;
 }
 body .lander {
   overflow: hidden;
@@ -116,7 +115,7 @@ body .lander .pitch {
   transition: 1s;
 }
 body .horWrapper {
-  height: 85vh;
+  height: 100vh;
   display: flex;
   background-color: pink;
   color: #000;
