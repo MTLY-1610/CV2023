@@ -74,6 +74,7 @@
 body {
     overflow: hidden;
 
+
     .menu {
         display: flex;
         position: fixed;
@@ -97,9 +98,9 @@ body {
         overflow: hidden;
         background: #fff;
         color: #000;
-        opacity: 0;
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
         height: 100vh;
         width: 100vw;
@@ -108,6 +109,7 @@ body {
         .namewrapper {
             width: 92vw;
             height: auto;
+            opacity: 0;
             margin: 4vw;
             display: flex;
             flex-direction: row;
@@ -119,23 +121,29 @@ body {
             font-style: normal;
             font-size: 7vw;
 
-            #name {
-                opacity: 1;
-                transition: 1s;
-                font-size: 1em;
-                flex: wrap;
-            }
+  
         }
-        .pitch  {
-            display: flex;
+        .pitch {
             opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 92vw;
+            height: auto;
+            text-align: justify;
+            font-family: "field-gothic-xwide", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 4vw;
             color: #000;
             transition: 1s;
-     
+    
         }
 
     }
-  
+
+
+
     .horWrapper {
         height: 100vh;
         display: flex;
@@ -161,8 +169,8 @@ body {
                 font-weight: 700;
                 font-style: normal;
                 font-size: 10vw;
-               
-    
+
+
 
                 .cards-header {
                     height: auto;
@@ -189,7 +197,7 @@ body {
                     }
 
                 }
-                
+
 
                 .cards {
                     height: auto;
@@ -216,10 +224,11 @@ body {
 
                     }
                 }
+
                 .cards:nth-child(odd) {
                     background-color: #000;
                 }
-                
+
             }
         }
 
@@ -261,7 +270,7 @@ body {
                 width: 100%;
                 padding: 2rem;
 
-                .lg-pd{
+                .lg-pd {
                     width: 92vw;
                     display: flex;
                     stroke: 1px;
@@ -278,6 +287,7 @@ body {
                     font-weight: 400;
                     font-style: normal;
                     font-size: .6rem;
+
                     #next-button {
                         border: none;
                         background: none;
@@ -289,9 +299,6 @@ body {
                         font-size: .6rem;
                     }
 
-                  
-
-              
                 }
 
             }
