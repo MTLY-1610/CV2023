@@ -123,6 +123,7 @@ body .lander .pitch {
 body .horWrapper {
   height: 100vh;
   display: flex;
+  background-color: pink;
   color: #000;
 }
 body .horWrapper .card-holder {
