@@ -70,18 +70,19 @@
     padding: 0;
     box-sizing: border-box;
 
+
 }
 
 
 body {
-    overflow: hidden;
 
+    overflow: hidden;
 
     .menu {
 
         display: flex;
         position: fixed;
-        color: #000;
+        color: greenyellow;
         top: 0;
         width: 100vw;
         padding: 0 4vw 0 4vw;
@@ -108,14 +109,14 @@ body {
         width: 100vw;
 
         .namewrapper {
-            width: 92vw;
+            width: 100vw;
             height: auto;
             opacity: 0;
-            margin: 4vw;
+            margin: auto;
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             display: flex;
             font-family: "field-gothic-xwide", sans-serif;
             font-weight: 700;
@@ -129,6 +130,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
+            padding-bottom: 4vh;
             width: 92vw;
             height: auto;
             text-align: justify;
@@ -269,7 +271,7 @@ body {
                 justify-content: flex-start;
 
 
-                .hash {}
+                .hash {display: flex;}
 
                 .num {
                     padding: 10vh 0 0 0;

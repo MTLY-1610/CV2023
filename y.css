@@ -91,14 +91,14 @@ body .lander {
   width: 100vw;
 }
 body .lander .namewrapper {
-  width: 92vw;
+  width: 100vw;
   height: auto;
   opacity: 0;
-  margin: 4vw;
+  margin: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   display: flex;
   font-family: "field-gothic-xwide", sans-serif;
   font-weight: 700;
@@ -110,6 +110,7 @@ body .lander .pitch {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 4vh;
   width: 92vw;
   height: auto;
   text-align: justify;
@@ -219,6 +220,9 @@ body .footer .cards .footerHeader {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+}
+body .footer .cards .footerHeader .hash {
+  display: flex;
 }
 body .footer .cards .footerHeader .num {
   padding: 10vh 0 0 0;
