@@ -149,7 +149,7 @@ body .horWrapper .card-holder .cards {
 }
 body .horWrapper .card-holder .cards .cards-header {
   height: auto;
-  width: 90%;
+  width: 92vw;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -160,7 +160,6 @@ body .horWrapper .card-holder .cards .cards-header {
 body .horWrapper .card-holder .cards .cards-header .title {
   display: flex;
   flex-direction: column;
-  padding: 1vh 2vw;
 }
 body .horWrapper .card-holder .cards .cards-header .title-right {
   display: flex;
