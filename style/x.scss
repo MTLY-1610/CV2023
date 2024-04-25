@@ -89,9 +89,10 @@ body {
         height: 6vw;
         opacity: 0;
         font-family: "field-gothic-xwide", sans-serif;
-        font-size: 1vw;
-        font-weight: 900;
-        justify-content: space-between;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 2vw;
+    justify-content: space-between;
         align-items: center;
         z-index: 10;
 
@@ -125,6 +126,21 @@ body {
 
         }
 
+        // .hero {
+        //     width: 92vw;
+        //     height: 30vh;
+        //     background-attachment:"" fixed;
+        //     opacity: 0;
+        //     margin: auto;
+        //     display: flex;
+        //     flex-direction: row;
+        //     align-items: center;
+        //     justify-content: center;
+        //     border: #000 .4vh solid ; 
+        //     border-radius: 1dvh;         
+
+        // }
+
         .pitch {
             opacity: 0;
             display: flex;
@@ -150,7 +166,7 @@ body {
     .horWrapper {
         height: 100vh;
         display: flex;
-        background-color: pink;
+        // background-color: pink;
         color: #000;
 
         .card-holder {
@@ -171,7 +187,7 @@ body {
                 font-family: "field-gothic-xwide", sans-serif;
                 font-weight: 700;
                 font-style: normal;
-                font-size: 10vw;
+                font-size: 7vw;
 
 
 
@@ -202,31 +218,6 @@ body {
                 }
 
 
-                .cards {
-                    height: auto;
-                    width: 90%;
-                    display: flex;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: space-between;
-                    text-transform: none;
-                    font-size: 4rem;
-                    padding: 0;
-
-                    .cards-main-header {
-                        height: auto;
-                        width: 100%;
-                        display: flex;
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        justify-content: space-between;
-                        text-transform: none;
-                        padding: 1vh 2vw;
-
-                    }
-                }
 
                 .cards:nth-child(odd) {
                     background-color: #000;
@@ -273,12 +264,12 @@ body {
 
                 .hash {display: flex;}
 
-                .num {
-                    padding: 10vh 0 0 0;
-                    font-family: "input-mono", monospace;
-                    font-weight: 400;
-                    font-size: medium;
-                }
+                // .num {
+                //     padding: 10vh 0 0 0;
+                //     font-family: "input-mono", monospace;
+                //     font-weight: 400;
+                //     font-size: medium;
+                // }
 
 
 
@@ -292,16 +283,17 @@ body {
                 color: #000;
                 align-items: center;
                 justify-content: space-between;
+                margin-bottom: 4vh;
                 height: 20vh;
                 width: 100%;
-                padding: 2rem;
+                padding: auto;
 
-                .lg-pd {
-                    width: 92vw;
-                    display: flex;
-                    stroke: 1px;
-                    color: #000;
-                }
+                // .lg-pd {
+                //     width: 92vw;
+                //     display: flex;
+                //     stroke: 1px;
+                //     color: #000;
+                // }
 
                 .footer-col {
                     display: flex;
@@ -309,20 +301,29 @@ body {
                     justify-content: space-between;
                     height: 30%;
                     width: 90vw;
-                    font-family: "input-mono", monospace;
-                    font-weight: 400;
+                    font-family: "field-gothic-xwide", sans-serif;
+                    font-weight: 700;
                     font-style: normal;
-                    font-size: .6rem;
+                    font-size: 1rem;
+
+                    .menu-name{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        height: 100%;
+                    
+                    }
 
                     #next-button {
                         border: none;
                         background: none;
                         display: flex;
-                        text-decoration: none;
-                        font-family: "input-mono", monospace;
-                        font-weight: 400;
+                        font-family: "field-gothic-xwide", sans-serif;
+                        font-weight: 700;
                         font-style: normal;
-                        font-size: .6rem;
+                        font-size: 1rem;
+                        text-decoration: none;
+                        
                     }
 
                 }

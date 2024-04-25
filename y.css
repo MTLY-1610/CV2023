@@ -73,8 +73,9 @@ body .menu {
   height: 6vw;
   opacity: 0;
   font-family: "field-gothic-xwide", sans-serif;
-  font-size: 1vw;
-  font-weight: 900;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2vw;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
@@ -124,7 +125,6 @@ body .lander .pitch {
 body .horWrapper {
   height: 100vh;
   display: flex;
-  background-color: pink;
   color: #000;
 }
 body .horWrapper .card-holder {
@@ -145,7 +145,7 @@ body .horWrapper .card-holder .cards {
   font-family: "field-gothic-xwide", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 10vw;
+  font-size: 7vw;
 }
 body .horWrapper .card-holder .cards .cards-header {
   height: auto;
@@ -165,29 +165,6 @@ body .horWrapper .card-holder .cards .cards-header .title {
 body .horWrapper .card-holder .cards .cards-header .title-right {
   display: flex;
   flex-direction: column;
-  padding: 1vh 2vw;
-}
-body .horWrapper .card-holder .cards .cards {
-  height: auto;
-  width: 90%;
-  display: flex;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  text-transform: none;
-  font-size: 4rem;
-  padding: 0;
-}
-body .horWrapper .card-holder .cards .cards .cards-main-header {
-  height: auto;
-  width: 100%;
-  display: flex;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  text-transform: none;
   padding: 1vh 2vw;
 }
 body .horWrapper .card-holder .cards .cards:nth-child(odd) {
@@ -224,27 +201,16 @@ body .footer .cards .footerHeader {
 body .footer .cards .footerHeader .hash {
   display: flex;
 }
-body .footer .cards .footerHeader .num {
-  padding: 10vh 0 0 0;
-  font-family: "input-mono", monospace;
-  font-weight: 400;
-  font-size: medium;
-}
 body .footer .cards .real-footer {
   display: flex;
   flex-direction: column;
   color: #000;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 4vh;
   height: 20vh;
   width: 100%;
-  padding: 2rem;
-}
-body .footer .cards .real-footer .lg-pd {
-  width: 92vw;
-  display: flex;
-  stroke: 1px;
-  color: #000;
+  padding: auto;
 }
 body .footer .cards .real-footer .footer-col {
   display: flex;
@@ -252,20 +218,26 @@ body .footer .cards .real-footer .footer-col {
   justify-content: space-between;
   height: 30%;
   width: 90vw;
-  font-family: "input-mono", monospace;
-  font-weight: 400;
+  font-family: "field-gothic-xwide", sans-serif;
+  font-weight: 700;
   font-style: normal;
-  font-size: 0.6rem;
+  font-size: 1rem;
+}
+body .footer .cards .real-footer .footer-col .menu-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 body .footer .cards .real-footer .footer-col #next-button {
   border: none;
   background: none;
   display: flex;
-  text-decoration: none;
-  font-family: "input-mono", monospace;
-  font-weight: 400;
+  font-family: "field-gothic-xwide", sans-serif;
+  font-weight: 700;
   font-style: normal;
-  font-size: 0.6rem;
+  font-size: 1rem;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=y.css.map */
