@@ -278,7 +278,7 @@ body {
 
             .real-footer {
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 color: #000;
                 align-items: center;
                 justify-content: space-between;
@@ -296,14 +296,15 @@ body {
 
                 .footer-col {
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
+                    align-items: flex-end;
                     justify-content: space-between;
                     height: 30%;
-                    width: 90vw;
+                    width: 10vw;
                     font-family: "field-gothic-xwide", sans-serif;
                     font-weight: 700;
                     font-style: normal;
-                    font-size: 1rem;
+                    font-size: 2vw;
 
                     .menu-name{
                         display: flex;
@@ -314,7 +315,13 @@ body {
                     }
 
                     #next-button {
-                        border: none;
+                        align-items: center;
+                        justify-content: center;
+                        border: .4vw solid #000;
+                        border-radius: 50%;
+                        height: 4vw;
+
+                        width: 4vw;
                         background: none;
                         display: flex;
                         font-family: "field-gothic-xwide", sans-serif;
