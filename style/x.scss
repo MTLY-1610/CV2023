@@ -79,7 +79,7 @@ body {
     overflow: hidden;
 
     .menu {
-
+        left: -10px;
         display: flex;
         position: fixed;
         color: #000;
@@ -109,9 +109,9 @@ body {
         height: 100vh;
         width: 100vw;
 
-        .namewrapper {
+        .hero {
             width: 100vw;
-            height: auto;
+            height: 15vh;
             opacity: 0;
             margin: auto;
             display: flex;
@@ -126,20 +126,7 @@ body {
 
         }
 
-        // .hero {
-        //     width: 92vw;
-        //     height: 30vh;
-        //     background-attachment:"" fixed;
-        //     opacity: 0;
-        //     margin: auto;
-        //     display: flex;
-        //     flex-direction: row;
-        //     align-items: center;
-        //     justify-content: center;
-        //     border: #000 .4vh solid ; 
-        //     border-radius: 1dvh;         
 
-        // }
 
         .pitch {
             opacity: 0;
@@ -148,7 +135,7 @@ body {
             justify-content: center;
             padding-bottom: 4vh;
             width: 92vw;
-            height: auto;
+            height: 76vh;
             text-align: justify;
             font-family: "field-gothic-xwide", sans-serif;
             font-weight: 700;
@@ -164,8 +151,9 @@ body {
 
 
     .horWrapper {
-        height: 100vh;
+        height: 82vh;
         display: flex;
+        top: 7vh;
         // background-color: pink;
         color: #000;
 
@@ -199,7 +187,7 @@ body {
                     align-items: center;
                     justify-content: space-between;
                     padding: 0;
-                    margin-top: 6vh;
+                    margin-top: 6 vh;
 
                     .title {
                         display: flex;
@@ -213,7 +201,6 @@ body {
                         padding: 1vh 2vw;
 
                     }
-
                 }
 
 
@@ -329,19 +316,6 @@ body {
                     #next-button {
                         align-items: center;
                         justify-content: center;
-                        border: .4vw solid #000;
-                        border-radius: 50%;
-                        height: 4vw;
-
-                        width: 4vw;
-                        background: none;
-                        display: flex;
-                        font-family: "field-gothic-xwide", sans-serif;
-                        font-weight: 700;
-                        font-style: normal;
-                        font-size: 1rem;
-                        text-decoration: none;
-                        
                     }
 
                 }

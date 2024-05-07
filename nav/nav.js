@@ -43,11 +43,10 @@ ScrollTrigger.create({
 
 // Gsap lander section timelime
 
-gsap.to(".namewrapper", { opacity: 1, delay: 0.5, duration: 1.75, ease: "power0.inout" });
-gsap.to(".namewrapper", { opacity: 0, duration: 1.35, delay: 2.75, ease: "power2.out" });
-gsap.to(".menu", { opacity: 1, duration: 1.35, ease: Bounce.in, delay: 2.75 });
-gsap.to(".pitch", { opacity: 1, duration: .5, delay: 2.75 });
-gsap.to(".hero", { opacity: 1, duration: .5, delay: 3 });
+// gsap.to(".hero", { opacity: 0 , delay: 0.51, duration: .325, ease: "power0.inout" });
+gsap.to(".menu", { opacity: 1, x: 10, duration: .750, ease: Bounce.in, delay: .325 });
+gsap.to(".pitch", { opacity: 1, duration: .325, delay: .375 });
+// gsap.to(".hero", { opacity: 1, duration: .325, delay: 3 });
 
 
 
