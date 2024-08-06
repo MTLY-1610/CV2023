@@ -1,12 +1,12 @@
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import ScrollSection from "@/components/ScrollSection";
+import Footer from "@/components/footer/Footer";
+import Hero from "@/components/hero/Hero";
+import HorizSection from "@/components/horizSection/HorizSection";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <ScrollSection />
+      <HorizSection />
       <Footer />
     </>
   );
