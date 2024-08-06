@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <footer className="footer">
-      <span>beep me </span>
+      <h1>BEEP ME </h1>
     </footer>
   );
 }
