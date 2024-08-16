@@ -5,10 +5,13 @@ function Menu() {
   return (
     <div className="menu__wrapper">
       <span>
-        MTLY
+        NAME
       </span>
       <span>
-        MENU
+       LOGO
+      </span>
+      <span>
+        BURGER
       </span>
     </div>
   );
