@@ -1,11 +1,10 @@
 import React from "react";
-import Menu from "@/components/menu/Menu";
+import styles from './Hero.module.css'
 
 function Hero() {
   return (
     
-    <header className="hero__header">
-
+    <header className={styles.hero__header}>
       <h1>YO</h1>
     </header>
   );
