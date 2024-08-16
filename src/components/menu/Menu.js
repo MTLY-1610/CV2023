@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from "react";
-
+import styles from './Menu.module.css'
 
 function Menu() {
   return (
-    <div className="menu__wrapper">
+    <div className={styles.menu__wrapper}>
       <span>
         NAME
       </span>

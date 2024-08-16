@@ -1,0 +1,12 @@
+.menu__wrapper{
+    position: fixed;
+    height: 10vh;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--primaryTextColor);
+    padding: 0 2rem;
+  }
+  
