@@ -1,6 +1,6 @@
 .menu__wrapper{
     position: fixed;
-    height: 15vh;
+    height: 12vh;
     width:100%;
     display:flex;
     flex-direction: column;
@@ -8,7 +8,7 @@
     justify-content: space-between;
     color: var(--primaryTextColor);
     font-size: 1rem;
-    padding: 4rem 2rem 0 2rem;
+    padding: 2rem 2rem 0 2rem;
 
 
   }

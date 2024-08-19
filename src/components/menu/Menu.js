@@ -1,5 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import styles from './Menu.module.css';
+import Image from "next/image";
+import smiley from 'public/fonts/smiley.png'
 
 
 function Menu() {
@@ -15,16 +17,18 @@ function Menu() {
             frontend developer
           </span>
           <span className={styles.menu__name}>
-            ui dedsigner
+            ui designer
           </span>
         </div>
         <div className={styles.menu__item__center}>
-          <span className={styles.menu__img}>
-            some
-          </span>
-          <span className={styles.menu__img}>
-            LOGO
-          </span>
+
+          <Image
+            src={smiley}
+            width={60}
+            height={60}
+            alt="Picture of the author"
+          />
+
         </div>
         <div className={styles.menu__item__right}>
           <span className={styles.menu__burger}>
