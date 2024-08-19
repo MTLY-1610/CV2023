@@ -22,6 +22,7 @@
   
   }
   .menu__item__left{
+    opacity: 0;
     display:flex;
     flex-direction:column;
     align-items: flex-start;
@@ -32,6 +33,7 @@
   
 
   .menu__item__center{
+    opacity: 0;
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -41,6 +43,7 @@
   }
 
   .menu__item__right{
+    opacity: 0;
     display:flex;
     flex-direction:column;
     align-items: flex-end;
