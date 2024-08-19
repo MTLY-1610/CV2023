@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from "react";
+
 import styles from './Menu.module.css';
 import Image from "next/image";
+import { gsap } from 'gsap';
 import smiley from 'public/fonts/smiley.png'
 
 
@@ -24,8 +26,8 @@ function Menu() {
 
           <Image
             src={smiley}
-            width={60}
-            height={60}
+            width={50}
+            height={50}
             alt="Picture of the author"
           />
 
