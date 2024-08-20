@@ -42,4 +42,5 @@
   max-width: 300px; 
   transition: opacity 0.5s ease, transform 0.5s ease;
   z-index: 100; 
+  opacity: .5;
 }

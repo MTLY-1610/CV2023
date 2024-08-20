@@ -9,7 +9,6 @@ import smiley from 'public/fonts/smiley.png'
 const Hero = () => {
   const heroGreet = useRef(null);
   const heroPitch = useRef(null);
-  const heroText = useRef(null);
   const [isImageVisible, setIsImageVisible] = useState(false);
   const textRef = useRef(null);
 
