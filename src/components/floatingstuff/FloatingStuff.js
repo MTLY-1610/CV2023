@@ -56,7 +56,8 @@ const FloatingText = () => {
       bevelThickness={0.1}
       bevelSize={0.1}
       bevelSegments={5}
-      material={gradientMaterial} // Apply the gradient material
+      material={gradientMaterial} 
+      
     >
       HIRE ME
     </Text3D>
@@ -68,7 +69,7 @@ const FloatingStuff = () => {
 
   React.useEffect(() => {
     if (cameraRef.current) {
-      cameraRef.current.position.z = 15; 
+      cameraRef.current.position.z = 11; 
     }
   }, []);
 
