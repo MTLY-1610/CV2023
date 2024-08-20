@@ -6,7 +6,6 @@ import smiley from 'public/fonts/smiley.png'
 
 
 const AnimatedMenu = () => {
-  // Create refs for each menu item
   const menuItem1 = useRef(null);
   const menuItem2 = useRef(null);
   const menuItem3 = useRef(null);
@@ -17,16 +16,12 @@ const AnimatedMenu = () => {
   const menuItem8 = useRef(null);
 
   useEffect(() => {
-    // Create a GSAP timeline
     const tl = gsap.timeline();
 
-    // Add opacity animations to the timeline
     tl.to([menuItem1.current, menuItem4.current], { opacity: 1, duration: 0.2, delay:.5, ease: "power3.in"})
     tl.to([menuItem2.current, menuItem5.current], { opacity: 1, duration: 0.2, ease: "power3.in" })
     tl.to([menuItem3.current, menuItem6.current], { opacity: 1, duration: 0.2, ease: "power3.in" })
     tl.to([menuItem7.current, menuItem8.current], { opacity: 1, duration: 0.2, ease: "power3.in" })
-
-
 
     return () => {
       tl.kill();

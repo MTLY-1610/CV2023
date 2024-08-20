@@ -13,8 +13,6 @@
   font-size: var(--headlineSmall);
 }
   
-
-
 .hero__greet{
   opacity: 0;
   display:flex;
@@ -29,19 +27,19 @@
   text-transform: uppercase;
 }
 .hero__image {
-  max-width: 300px; /* Adjust size as needed */
+  max-width: 300px;
   transition: opacity 0.5s ease, transform 0.5s ease;
-  z-index: 100; /* Ensure the image appears above other content */
+  z-index: 100;
 }
 
 .hero__hover {
-  color: inherit; /* Keep the same color as the text */
-  cursor: pointer; /* Change cursor to indicate it's interactive */
-  position: relative; /* Necessary for positioning the image */
+  color: inherit; 
+  cursor: pointer; 
+  position: relative; 
 }
 
 .hero__image {
-  max-width: 300px; /* Adjust size as needed */
+  max-width: 300px; 
   transition: opacity 0.5s ease, transform 0.5s ease;
-  z-index: 100; /* Ensure the image appears above other content */
+  z-index: 100; 
 }
