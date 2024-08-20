@@ -1,25 +1,30 @@
 .hero__header {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    text-align: center;
+  position:relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  font: 800 2em/30px Helvetica, sans;
+  line-height: 1.2em;
+  font-size: var(--headlineSmall);
   }
   
-  
-  
-  .hero__header h1 {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    font-size: var(--headlineBig);
-    color: var(--primaryTextColor);
+  .hero__pitch {
+    opacity: 0;
+    display:flex;
+    position: absolute;
+    color: pink;
   }
-  
-  .hero__header h2 {
-    letter-spacing: var(--headlineSmall);
-    font-size: var(--headlineSmall);
-    text-transform: uppercase;
-    color: var(--primaryColor);
+
+.hero__greet{
+
+    opacity: 0;
+    display:flex;
+    position: absolute;
   }
+
+
