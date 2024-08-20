@@ -9,6 +9,7 @@ import smiley from 'public/fonts/smiley.png'
 const Hero = () => {
   const heroGreet = useRef(null);
   const heroPitch = useRef(null);
+  const heroText = useRef(null);
   const [isImageVisible, setIsImageVisible] = useState(false);
   const textRef = useRef(null);
 
@@ -31,9 +32,24 @@ const Hero = () => {
       gsap.to(textRef.current, { opacity: 0, duration: 0.5 });
     }
   }, [isImageVisible]);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const targetOpacity = scrollY > 50 ? 0 : 1;
+
+      gsap.to(heroPitch.current, { opacity: targetOpacity, duration: 0.5 });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <div className={styles.hero__header}>
+    <div
+    className={styles.hero__header}>
       <div ref={heroGreet} className={styles.hero__greet}>
         <h1>hello or some greetings</h1>
       </div>
