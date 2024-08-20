@@ -15,7 +15,7 @@
   
 
 
-.hero__greet   .hero__pitch {
+.hero__greet{
   opacity: 0;
   display:flex;
   position: absolute;
@@ -28,5 +28,20 @@
   position: absolute;
   text-transform: uppercase;
 }
+.hero__image {
+  max-width: 300px; /* Adjust size as needed */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 100; /* Ensure the image appears above other content */
+}
 
+.hero__hover {
+  color: inherit; /* Keep the same color as the text */
+  cursor: pointer; /* Change cursor to indicate it's interactive */
+  position: relative; /* Necessary for positioning the image */
+}
 
+.hero__image {
+  max-width: 300px; /* Adjust size as needed */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 100; /* Ensure the image appears above other content */
+}
