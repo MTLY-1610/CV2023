@@ -9,9 +9,11 @@ body,
 }
 
 :root {
-  --backgroundColor: #05081016;
+  --backgroundColor: #B1B3B3;
   --primaryColor: #0aa1ff;
-  --primaryTextColor: #2C5697;
+  --primaryTextColor: #000;
+  --coolGray5c: #B1B3B3
+  --coolGray11c: #53565A
   --secondaryTextColor: #2C5697;
   --headlineBig: clamp(5rem, 9.9vw, 15rem);
   --headlineMedium: clamp(1rem, 2vw, 4rem);

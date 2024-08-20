@@ -4,6 +4,7 @@ import styles from './Menu.module.css';
 import Image from "next/image";
 import smiley from 'public/fonts/smiley.png'
 
+
 const AnimatedMenu = () => {
   // Create refs for each menu item
   const menuItem1 = useRef(null);
@@ -51,7 +52,7 @@ const AnimatedMenu = () => {
             src={smiley}
             width={50}
             height={50}
-            alt="Picture of the author"
+            alt="some logo will go there but for now it's a smiley"
           />
         </div>
         <div className={styles.menu__item__right}>
