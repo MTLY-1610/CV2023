@@ -26,7 +26,7 @@ const Hero= () => {
       <h1>hello or some greetings</h1>
       </div>
       <div ref={heroPitch} className={styles.hero__pitch}>
-      <h1>Some presentation with some fancy image display on hover</h1>
+      <h1>presentation text with some fancy image display on hover</h1>
       </div>
 
     </div>

@@ -11,20 +11,22 @@
   font: 800 2em/30px Helvetica, sans;
   line-height: 1.2em;
   font-size: var(--headlineSmall);
-  }
+}
   
-  .hero__pitch {
-    opacity: 0;
-    display:flex;
-    position: absolute;
-    color: pink;
-  }
 
-.hero__greet{
 
-    opacity: 0;
-    display:flex;
-    position: absolute;
-  }
+.hero__greet   .hero__pitch {
+  opacity: 0;
+  display:flex;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.hero__pitch {  
+  opacity: 0;
+  display:flex;
+  position: absolute;
+  text-transform: uppercase;
+}
 
 
