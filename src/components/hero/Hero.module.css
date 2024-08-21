@@ -18,6 +18,10 @@
   display:flex;
   position: absolute;
   text-transform: uppercase;
+  text-align: center;
+  font: 800 2em/30px Helvetica, sans;
+  line-height: 1.2em;
+  font-size: var(--headlineBig);
 }
 
 .hero__pitch {  
@@ -27,9 +31,9 @@
   text-transform: uppercase;
 }
 .hero__image {
-  max-width: 300px;
   transition: opacity 0.5s ease, transform 0.5s ease;
   z-index: 100;
+  filter: grayscale(100%);
 }
 
 .hero__hover {
@@ -42,5 +46,7 @@
   max-width: 300px; 
   transition: opacity 0.5s ease, transform 0.5s ease;
   z-index: 100; 
-  opacity: .5;
+  opacity: .5; 
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
 }

@@ -21,7 +21,13 @@ const AnimatedMenu = () => {
     tl.to([menuItem1.current, menuItem4.current], { opacity: 1, duration: 0.2, delay:.5, ease: "power3.in"})
     tl.to([menuItem2.current, menuItem5.current], { opacity: 1, duration: 0.2, ease: "power3.in" })
     tl.to([menuItem3.current, menuItem6.current], { opacity: 1, duration: 0.2, ease: "power3.in" })
-    tl.to([menuItem7.current, menuItem8.current], { opacity: 1, duration: 0.2, ease: "power3.in" })
+    tl.to (menuItem7.current, { opacity: 1, duration: 0.2, ease: "power3.in" })
+
+    tl.fromTo(
+      menuItem8.current,
+      { scaleX: 0, transformOrigin: "center" }, // Start collapsed
+      { scaleX: 1, duration: 0.5, ease: "power3.out" } // Expand to full width
+    );
 
     return () => {
       tl.kill();
@@ -44,6 +50,7 @@ const AnimatedMenu = () => {
         </div>
         <div ref={menuItem7} className={styles.menu__item__center}>
           <Image
+          className={styles.menu__img}
             src={smiley}
             width={50}
             height={50}

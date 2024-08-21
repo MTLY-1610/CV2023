@@ -16,7 +16,7 @@ const Hero = () => {
     const tl = gsap.timeline();
 
     tl.to(heroGreet.current, { opacity: 1, duration: 1 })
-      .to(heroGreet.current, { opacity: 0, duration: 1 })
+      .to(heroGreet.current, { opacity: 0, duration: 1, delay: 3})
       .to(heroPitch.current, { opacity: 1, duration: 1 });
 
     return () => {
@@ -62,7 +62,7 @@ const Hero = () => {
         src={smiley}
         alt="Fancy display for superficial people"
         className={styles.hero__image}
-        style={{ opacity: 0, position: 'absolute' }}
+        style={{ opacity: 0, position: 'absolute'}}
       />
     </div>
   );
