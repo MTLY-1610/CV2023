@@ -22,7 +22,6 @@ const AnimatedMenu = () => {
     tl.to([menuItem2.current, menuItem5.current], { opacity: 1, duration: 0.2, ease: "power3.in" })
     tl.to([menuItem3.current, menuItem6.current], { opacity: 1, duration: 0.2, ease: "power3.in" })
     tl.to (menuItem7.current, { opacity: 1, duration: 0.2, ease: "power3.in" })
-
     tl.fromTo(
       menuItem8.current,
       { scaleX: 0, transformOrigin: "center" }, // Start collapsed
