@@ -18,14 +18,14 @@ const AnimatedMenu = () => {
   useEffect(() => {
     const tl = gsap.timeline();
 
-    tl.to([menuItem1.current, menuItem4.current], { opacity: 1, duration: 0.2, delay:.5, ease: "power3.in"})
-    tl.to([menuItem2.current, menuItem5.current], { opacity: 1, duration: 0.2, ease: "power3.in" })
-    tl.to([menuItem3.current, menuItem6.current], { opacity: 1, duration: 0.2, ease: "power3.in" })
-    tl.to (menuItem7.current, { opacity: 1, duration: 0.2, ease: "power3.in" })
+    tl.to([menuItem1.current, menuItem4.current], { opacity: 1, duration: 0.2, delay:.5, ease: "power3.out"})
+    tl.to([menuItem2.current, menuItem5.current], { opacity: 1, duration: 0.2, ease: "power3.out" })
+    tl.to([menuItem3.current, menuItem6.current], { opacity: 1, duration: 0.2, ease: "power3.out" })
+    tl.to (menuItem7.current, { opacity: 1, duration: 0.2, ease: "power3.out" })
     tl.fromTo(
       menuItem8.current,
-      { scaleX: 0, transformOrigin: "center" }, // Start collapsed
-      { scaleX: 1, duration: 0.5, ease: "power3.out" } // Expand to full width
+      { scaleX: 0, transformOrigin: "center" },
+      { scaleX: 1, duration: 0.75, ease: "power3.out" } 
     );
 
     return () => {
