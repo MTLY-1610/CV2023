@@ -68,7 +68,6 @@ const AnimatedMenu = () => {
           />
         </div>
 
-        {/* Menu items always visible on larger screens */}
         <div className={styles.menu__item__right}>
           <span ref={menuItem4} className={styles.menu__burger}>
             about me
@@ -81,14 +80,12 @@ const AnimatedMenu = () => {
           </span>
         </div>
 
-        {/* Burger Menu Icon with animation */}
         <div className={`${styles.burgerMenu} ${isMenuOpen ? styles.open : ''}`} onClick={toggleMenu}>
           <div className={styles.burgerLine}></div>
           <div className={styles.burgerLine}></div>
           <div className={styles.burgerLine}></div>
         </div>
 
-        {/* Fullscreen Menu Overlay on Mobile */}
         {isMenuOpen && (
           <div className={styles.fullscreenMenu} onClick={closeMenu}>
             <div className={styles.fullscreenMenuContent} onClick={(e) => e.stopPropagation()}>
