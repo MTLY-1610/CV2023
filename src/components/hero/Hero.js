@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import styles from './Hero.module.css';
 import Image from "next/image";
-import smiley from 'public/fonts/smiley.png'
+import smiley from 'public/img/smiley.png'
 
 
 

@@ -1,5 +1,6 @@
 .scroll_section__outer {
     overflow: hidden;
+
   }
 .scroll_section__inner {
     height: 100vh;
@@ -7,12 +8,14 @@
     display: flex;
     flex-direction: row;
     position: relative;
+    algn-items: center;
+    justify-content:center;
   }
   
   
   .scroll_section {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +23,7 @@
     font-size: var(--headlineBig);
     color: var(--primaryTextColor);
     text-transform:uppercase;
+
   }
   
   /* .scroll-section h3 {

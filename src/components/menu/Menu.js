@@ -1,11 +1,12 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { gsap } from 'gsap';
 import styles from './Menu.module.css';
 import Image from "next/image";
-import smiley from 'public/fonts/smiley.png'
-
+import smiley from 'public/img/smiley.png';
 
 const AnimatedMenu = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const menuItem1 = useRef(null);
   const menuItem2 = useRef(null);
   const menuItem3 = useRef(null);
@@ -14,24 +15,34 @@ const AnimatedMenu = () => {
   const menuItem6 = useRef(null);
   const menuItem7 = useRef(null);
   const menuItem8 = useRef(null);
+  const musicPlayerRef = useRef(null);
 
   useEffect(() => {
     const tl = gsap.timeline();
 
-    tl.to([menuItem1.current, menuItem4.current], { opacity: 1, duration: 0.2, delay:.5, ease: "power3.out"})
-    tl.to([menuItem2.current, menuItem5.current], { opacity: 1, duration: 0.2, ease: "power3.out" })
-    tl.to([menuItem3.current, menuItem6.current], { opacity: 1, duration: 0.2, ease: "power3.out" })
-    tl.to (menuItem7.current, { opacity: 1, duration: 0.2, ease: "power3.out" })
-    tl.fromTo(
-      menuItem8.current,
-      { scaleX: 0, transformOrigin: "center" },
-      { scaleX: 1, duration: 0.75, ease: "power3.out" } 
-    );
+    tl.to([menuItem1.current, menuItem4.current], { opacity: 1, duration: 0.2, delay: 0.5, ease: "power3.out" })
+      .to([menuItem2.current, menuItem5.current], { opacity: 1, duration: 0.2, ease: "power3.out" })
+      .to([menuItem3.current, menuItem6.current], { opacity: 1, duration: 0.2, ease: "power3.out" })
+      .to(menuItem7.current, { opacity: 1, duration: 0.2, ease: "power3.out" })
+      .fromTo(
+        menuItem8.current,
+        { scaleX: 0, transformOrigin: "center" },
+        { scaleX: 1, duration: 0.75, ease: "power3.out" }
+      )
+      .fromTo(musicPlayerRef.current, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power3.out" });
 
     return () => {
       tl.kill();
     };
   }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <div className={styles.menu__wrapper}>
@@ -49,13 +60,15 @@ const AnimatedMenu = () => {
         </div>
         <div ref={menuItem7} className={styles.menu__item__center}>
           <Image
-          className={styles.menu__img}
+            className={styles.menu__img}
             src={smiley}
-            width={50}
-            height={50}
+            width={38}
+            height={38}
             alt="some logo will go there but for now it's a smiley"
           />
         </div>
+
+        {/* Menu items always visible on larger screens */}
         <div className={styles.menu__item__right}>
           <span ref={menuItem4} className={styles.menu__burger}>
             about me
@@ -67,6 +80,30 @@ const AnimatedMenu = () => {
             ui design
           </span>
         </div>
+
+        {/* Burger Menu Icon with animation */}
+        <div className={`${styles.burgerMenu} ${isMenuOpen ? styles.open : ''}`} onClick={toggleMenu}>
+          <div className={styles.burgerLine}></div>
+          <div className={styles.burgerLine}></div>
+          <div className={styles.burgerLine}></div>
+        </div>
+
+        {/* Fullscreen Menu Overlay on Mobile */}
+        {isMenuOpen && (
+          <div className={styles.fullscreenMenu} onClick={closeMenu}>
+            <div className={styles.fullscreenMenuContent} onClick={(e) => e.stopPropagation()}>
+              <span className={styles.menu__burger}>
+                about me
+              </span>
+              <span className={styles.menu__burger}>
+                web development
+              </span>
+              <span className={styles.menu__burger}>
+                ui design
+              </span>
+            </div>
+          </div>
+        )}
       </div>
       <div ref={menuItem8} className={styles.menu__border}></div>
     </div>
