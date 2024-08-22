@@ -1,33 +1,35 @@
 .hero__header {
   height: 100vh;
   display: flex;
+  padding: 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   display: flex;
   text-align: center;
   font: 800 2em/30px Helvetica, sans;
-  line-height: 1.2em;
-  font-size: var(--headlineSmall);
+  font-size: 1em;
 }
   
 .hero__greet{
   opacity: 0;
   display:flex;
+  padding:2rem;
   position: absolute;
   text-transform: uppercase;
   text-align: center;
   font: 800 2em/30px Helvetica, sans;
-  line-height: 1.2em;
   font-size: var(--headlineMedium);
 }
 
 .hero__pitch {  
   opacity: 0;
   display:flex;
+  padding:2rem;
   position: absolute;
   text-transform: uppercase;
 }
+
 .hero__image {
   transition: opacity 0.5s ease, transform 0.5s ease;
   z-index: 100;
@@ -47,4 +49,17 @@
   opacity: .5; 
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
+}
+
+@media (max-width: 768px) {
+  .hero__greet {  
+    font-size:30px;
+  }
+  .hero__pitch {  
+    font-size:10px;
+  }
+}
+
+@media (min-width: 769px) {
+
 }

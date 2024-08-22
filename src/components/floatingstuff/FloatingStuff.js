@@ -36,9 +36,9 @@ const FloatingText = () => {
     fragmentShader: `
       varying vec3 vPosition;
       void main() {
-        float zMix = (vPosition.z + 2.0) / 4.0; // Normalize z position to 0-1 range
-        vec3 color1 = vec3(1.0, 0.4, 0.7); // Pink
-        vec3 color2 = vec3(0.4, 0.7, 1.0); // Light Blue
+        float zMix = (vPosition.z + 2.0) / 4.0; 
+        vec3 color1 = vec3(1.0, 0.4, 0.7);
+        vec3 color2 = vec3(0.4, 0.7, 1.0);
         gl_FragColor = vec4(mix(color1, color2, zMix), 1.0);
       }
     `,
@@ -48,6 +48,7 @@ const FloatingText = () => {
   return (
     <Text3D
       ref={textRef}
+      
       font="/fonts/Druk Wide Super _Italic.json"
       size={1}
       height={0.4}
@@ -59,7 +60,7 @@ const FloatingText = () => {
       material={gradientMaterial} 
       
     >
-      HIRE ME
+      H I R E  M E
     </Text3D>
   );
 };
