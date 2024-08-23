@@ -20,9 +20,9 @@ body,
   --spacing: clamp(0.9rem, 0.75vw, 1.3rem);
 }
 
-body {
-  /* background-color: var(--coolGray11c);
-  color:var(--coolGray5c) */
+.body {
+  background-color: var(--coolGray11c);
+  color:var(--coolGray5c)
 }
 
 .scroll-section-outer {

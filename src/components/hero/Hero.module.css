@@ -51,17 +51,21 @@
 .hero__pitch_sentence_one,  {
   word-break: keep-all;
 }
+.hero__word {
+  display: inline-block;
 
-
-
-
-.hero__image {
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  z-index: 100;
-  filter: grayscale(100%);
 }
 
-.hero__hover {
+.hero__image {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2.5vw;
+  height:auto;
+}
+
+
+
+/* .hero__hover {
   color: inherit; 
   cursor: pointer; 
   position: relative; 
@@ -70,12 +74,8 @@
 
 .hero__image {
   max-width: 300px; 
-  transition: opacity 0.5s ease, transform 0.5s ease;
   z-index: 100; 
-  opacity: .5; 
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
-}
+} */
 
 @media (max-width: 768px) {
   .hero__header{
@@ -88,6 +88,12 @@
   .hero__pitch {  
     width:100%;
     font-size:25px;
+  }
+  .hero__image {
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 25px;
+    height:auto;
   }
 }
 
