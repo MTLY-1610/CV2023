@@ -48,35 +48,34 @@ const AnimatedMenu = () => {
     <div className={styles.menu__wrapper}>
       <div className={styles.menu__items}>
         <div className={styles.menu__item__left}>
-          <span ref={menuItem1} className={styles.menu__name}>
+          <span ref={menuItem1} className={styles.menu__name__first}>
             MATHIEU LARROUY
           </span>
           <span ref={menuItem2} className={styles.menu__name}>
-            frontend developer
+            Frontend developer
           </span>
           <span ref={menuItem3} className={styles.menu__name}>
-            ui designer
+            UI designer
           </span>
         </div>
         <div ref={menuItem7} className={styles.menu__item__center}>
-          <Image
+          {/* <Image
             className={styles.menu__img}
             src={smiley}
             width={38}
             height={38}
             alt="some logo will go there but for now it's a smiley"
-          />
+          /> */}
         </div>
 
         <div className={styles.menu__item__right}>
           <span ref={menuItem4} className={styles.menu__burger}>
-            about me
+            Frontend stack
           </span>
           <span ref={menuItem5} className={styles.menu__burger}>
-            web development
-          </span>
-          <span ref={menuItem6} className={styles.menu__burger}>
-            ui design
+            UID stack          </span>
+          <span ref={menuItem6} className={styles.menu__burger__last}>
+            BEEP ME
           </span>
         </div>
 
@@ -90,13 +89,13 @@ const AnimatedMenu = () => {
           <div className={styles.fullscreenMenu} onClick={closeMenu}>
             <div className={styles.fullscreenMenuContent} onClick={(e) => e.stopPropagation()}>
               <span className={styles.menu__burger}>
-                about me
+                Frontend stack
               </span>
               <span className={styles.menu__burger}>
-                web development
+                UID stack
               </span>
               <span className={styles.menu__burger}>
-                ui design
+                BEEP ME
               </span>
             </div>
           </div>

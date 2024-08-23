@@ -1,24 +1,9 @@
-@font-face {
-    font-family: 'HelveticaNeue-Roman';
-    src: url('../../../../public/fonts/HelveticaNeue-Roman.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-@font-face {
-    font-family: 'NewBaskerville-Roman';
-    src: url('../../../../public/fonts/NewBaskerville-Roman.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
+
 
 .contactForm {
     width: 100%;
     margin: auto;
     padding: 1rem;
-    font: 800 1em 'HelveticaNeue-Roman', Helvetica, sans-serif;
   }
   
   .contactForm h2 {
