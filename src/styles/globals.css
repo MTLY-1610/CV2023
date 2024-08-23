@@ -21,7 +21,8 @@ body,
 }
 
 body {
-  background-color: var(--backgroundColor);
+  /* background-color: var(--coolGray11c);
+  color:var(--coolGray5c) */
 }
 
 .scroll-section-outer {

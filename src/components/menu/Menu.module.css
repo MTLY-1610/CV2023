@@ -85,6 +85,7 @@
   color: var(--coolGray5c);
 }
 .menu__name__first, .menu__burger__last{
+  opacity:0;
   font: bold 12px/22px 'Helvetica Neue' ;
 }
 
