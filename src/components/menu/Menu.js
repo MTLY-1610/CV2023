@@ -79,7 +79,7 @@ const AnimatedMenu = () => {
           </span>
           <span ref={menuItem5} className={styles.menu__burger}>
             UID stack          </span>
-          <span ref={menuItem6} className={styles.menu__burger__last} onClick={handleBeepMeClick}>
+          <span ref={menuItem6} className={styles.menu__burger__last} onClick={handleBeepMeClick} >
             BEEP ME
           </span>
         </div>
@@ -87,7 +87,7 @@ const AnimatedMenu = () => {
         <div className={`${styles.burgerMenu} ${isMenuOpen ? styles.open : ''}`} onClick={toggleMenu}>
           <div className={styles.burgerLine}></div>
           <div className={styles.burgerLine}></div>
-          <div className={styles.burgerLine}></div>
+          <div className={styles.burgerLine}onClick={handleBeepMeClick}></div>
         </div>
 
         {isMenuOpen && (

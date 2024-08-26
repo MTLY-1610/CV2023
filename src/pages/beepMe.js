@@ -1,27 +1,21 @@
-export default async function handler(req, res) {
-    const { phoneNumber, message } = req.body;
+const url = 'https://sms77io.p.rapidapi.com/rcs/events';
+const data = new FormData();
+data.append('msg_id', '123456789');
+data.append('to', '46768167500');
 
-    // The PHP code you provided converted to JavaScript
-    const base_url = "";
-    const params = new URLSearchParams({
-        access_token: '0005gOjCOlMH8F2BP8',
-        to: phoneNumber,
-        message: message,
-    });
+const options = {
+	method: 'POST',
+	headers: {
+		'x-rapidapi-key': '0211db70f2msh9dcddd9f6608631p1fff03jsn30a3f8142eff',
+		'x-rapidapi-host': 'sms77io.p.rapidapi.com'
+	},
+	body: data
+};
 
-    try {
-        const response = await fetch(`${base_url}?${params.toString()}`, {
-            method: 'GET',
-        });
-
-        const result = await response.text();
-
-        if (result.startsWith("OK")) {
-            res.status(200).json({ success: true, message: "Message has been sent successfully!" });
-        } else {
-            res.status(500).json({ success: false, message: "Send message failed!" });
-        }
-    } catch (error) {
-        res.status(500).json({ success: false, message: "An error occurred." });
-    }
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
 }
