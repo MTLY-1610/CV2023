@@ -49,7 +49,7 @@
   justify-content: space-between;
   padding: 2rem;
   font-size: 1rem;
-  color: var(--coolGray5c);
+  color: var(--coolGray1c);
   z-index: 100;
 }
 
@@ -82,7 +82,7 @@
 .menu__burger {
   opacity: 0;
   font: 300 12px/15px 'Helvetica Neue' ;
-  color: var(--coolGray5c);
+  color: var(--coolGray1c);
 }
 .menu__name__first, .menu__burger__last{
   opacity:0;
@@ -92,7 +92,7 @@
 .menu__border {
   width: 100%;
   height: 1px;
-  background-color: var(--coolGray5c);
+  background-color: var(--coolGray1c);
   transform-origin: center;
 }
 

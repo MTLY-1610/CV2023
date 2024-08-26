@@ -4,16 +4,20 @@ body,
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background-color: var(--green7726c);
+
   /* font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
+
 :root {
   --backgroundColor: #B1B3B3;
-  --primaryColor: #0aa1ff;
-  --primaryTextColor: #000;
   --coolGray5c: #B1B3B3;
   --coolGray11c: #53565A;
+  --coolGray1c: #D9D9D6;
+  --black3c: #212721;
+  --green7726c: #007B4B;
   --headlineBig: clamp(5rem, 9.9vw, 15rem);
   --headlineMedium: clamp(1rem, 2vw, 4rem);
   --headlineSmall: clamp(0.6rem, 0.75vw, 1.3rem);
@@ -21,8 +25,7 @@ body,
 }
 
 .body {
-  background-color: var(--coolGray11c);
-  color:var(--coolGray5c)
+
 }
 
 .scroll-section-outer {
