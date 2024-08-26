@@ -41,6 +41,24 @@ const AnimatedMenu = () => {
     setIsMenuOpen(false);
   };
 
+  const handleBeepMeClick = async () => {
+    try {
+      const response = await fetch('/api/sendSms', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          phoneNumber: '+46768167500',
+          message: 'my message',
+        }),
+      });
+
+      const data = await response.json();
+      alert(data.message);
+    } catch (error) {
+      alert("An error occurred while sending the message.");
+    }
+  };
+
   return (
     <div className={styles.menu__wrapper}>
       <div className={styles.menu__items}>
@@ -61,7 +79,7 @@ const AnimatedMenu = () => {
           </span>
           <span ref={menuItem5} className={styles.menu__burger}>
             UID stack          </span>
-          <span ref={menuItem6} className={styles.menu__burger__last}>
+          <span ref={menuItem6} className={styles.menu__burger__last} onClick={handleBeepMeClick}>
             BEEP ME
           </span>
         </div>
