@@ -55,6 +55,8 @@
 }
 
 .hero__word {
+  opacity:0;
+  background: none;
   display: flex;
   display: inline-block;
   margin-right: 1vw;
@@ -64,7 +66,7 @@
 .hero__image {
   display: inline-block;
   vertical-align: middle;
-  width: 2.5vw;
+  width: 3.3vw;
   height:auto;
 }
 

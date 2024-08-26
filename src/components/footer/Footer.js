@@ -1,12 +1,14 @@
 import React from "react";
 import styles from './Footer.module.css'
 import ContactForm from "./contactform/ContactForm";
+import Bottom from "./bottom/Bottom"
 
 function Footer() {
   return (
-    <footer className={styles.footer}>
+    <div className={styles.footer}>
       {/* <ContactForm /> */}
-    </footer>
+      <Bottom />
+    </div>
   );
 }
 

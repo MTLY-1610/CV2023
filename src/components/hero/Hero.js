@@ -94,7 +94,7 @@ const Hero = () => {
           ))}
         </div>
         <div className={styles.hero__pitch__sentence_two}>
-          {"Currently freelancing I'd like to find a new cosy full time home where I can develop my skills while having fun.".split(" ").map((word, index) => (
+          {"Currently freelancing, I’d like to find a new cosy full-time home where I can develop my skills while having fun.".split(" ").map((word, index) => (
             <span
               key={index}
               ref={(el) => {

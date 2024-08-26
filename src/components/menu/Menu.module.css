@@ -51,6 +51,7 @@
   font-size: 1rem;
   color: var(--coolGray1c);
   z-index: 100;
+  background:none;
 }
 
 .menu__items {
@@ -58,6 +59,7 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  background:none;
 }
 
 .menu__item__left,
