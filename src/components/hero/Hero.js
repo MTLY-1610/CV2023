@@ -88,7 +88,7 @@ const Hero = () => {
                 if (el) heroPitchSentenceOne.current[index] = el;
               }}
               className={styles.hero__word}
-              style={{ opacity: 0, display: 'inline-block', marginRight: '5px' }}
+              style={{ opacity: 0, display: 'inline-block'}}
             >
               {word}
               {index < heroPitchSentenceOne.current.length - 1 && "\u00A0"}
@@ -103,7 +103,7 @@ const Hero = () => {
                 if (el) heroPitchSentenceTwo.current[index] = el;
               }}
               className={styles.hero__word}
-              style={{ opacity: 0, display: 'inline-block', marginRight: '5px' }}
+              style={{ opacity: 0, display: 'inline-block'}}
             >
               {word}
               {index < heroPitchSentenceTwo.current.length - 1 && "\u00A0"}
