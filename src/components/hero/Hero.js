@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
+import gsap  from 'gsap';
 import styles from './Hero.module.css';
 import Image from "next/image";
 import smiley from 'public/img/smiley.png';
@@ -8,30 +8,28 @@ const Hero = () => {
   const heroGreet = useRef([]);
   const heroPitchSentenceOne = useRef([]);
   const heroPitchSentenceTwo = useRef([]);
-  const hoverTextRef = useRef([]);
   const smileyRef = useRef(null);
-  const [isImageVisible, setIsImageVisible] = useState(false);
+  const [isImageVisible] = useState(false);
   const textRef = useRef(null);
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 0.5 } });
-
+  
     tl.to(heroGreet.current, {
       opacity: 1,
       stagger: { each: 0.1, from: "start" },
-    });
-    tl.to(heroGreet.current, { opacity: 0, duration: 1, delay: 1 });
-    tl.to(heroPitchSentenceOne.current, {
+    })
+    .to(heroGreet.current, { opacity: 0, duration: 1, delay: 1 })
+    .to(heroPitchSentenceOne.current, {
       opacity: 1,
       stagger: { each: 0.15, from: "start" },
-    }, "+=0.5");
-    tl.to(heroPitchSentenceTwo.current, {
+    }, "+=0.5")
+    .to(heroPitchSentenceTwo.current, {
       opacity: 1,
       stagger: { each: 0.15, from: "start" },
-    }, "+=0.5");
-    tl.to(smileyRef.current, { opacity: 1, duration: 0.5 }, "-=0.5");
-
-
+    }, "+=0.5")
+    .to(smileyRef.current, { opacity: 1, duration: 0.5 }, "-=0.5");
+  
     return () => {
       tl.kill();
     };
@@ -50,7 +48,7 @@ const Hero = () => {
       const scrollY = window.scrollY;
       const targetOpacity = scrollY > 50 ? 0 : 1;
 
-      gsap.to([heroPitchSentenceOne.current, heroPitchSentenceTwo.current, smileyRef.current, hoverTextRef.current], {
+      gsap.to([heroPitchSentenceOne.current, heroPitchSentenceTwo.current, smileyRef.current], {
         opacity: targetOpacity,
         duration: 0.5,
       });
@@ -96,7 +94,7 @@ const Hero = () => {
           ))}
         </div>
         <div className={styles.hero__pitch__sentence_two}>
-          {"Currently freelancing I'd like to find a new cosy full time home where I can develop my front-end skills while having fun.".split(" ").map((word, index) => (
+          {"Currently freelancing I'd like to find a new cosy full time home where I can develop my skills while having fun.".split(" ").map((word, index) => (
             <span
               key={index}
               ref={(el) => {

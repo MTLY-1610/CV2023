@@ -23,14 +23,9 @@
   justify-content: center;
   align-items: center;
   display: flex;
-  color: var(--coolGray1c)
-  
+  color: var(--coolGray1c);
+}
 
-}
-.hero__letter {
-  display: inline-block;
-  opacity: 0; 
-}
 
 .hero__greet{
   display: flex;
@@ -38,10 +33,17 @@
   gap: 5px;
   padding:2rem;
   position: absolute;
-  text-transform: uppercase;
   text-align: center;
-  font: bold  15vw/30px 'Ogg';
+  font: bold  10vw/30px 'Ogg';
 }
+
+.hero__letter {
+  opacity: 0;
+  display: inline-block; /* Ensure the letters are inline */
+  transition: opacity 0.5s ease; /* Optional smooth transition */
+  z-index:100
+}
+
 .hero__pitch {  
   font:  bold  4vw/1em 'Ogg';
   display: flex;
@@ -51,10 +53,9 @@
   padding:2rem;
   position: absolute;
 }
-.hero__pitch_sentence_one,  {
-  word-break: keep-all;
-}
+
 .hero__word {
+  display: flex;
   display: inline-block;
   margin-right: 1vw;
 
@@ -63,7 +64,7 @@
 .hero__image {
   display: inline-block;
   vertical-align: middle;
-  width: 3.5vw;
+  width: 2.5vw;
   height:auto;
 }
 
@@ -84,7 +85,7 @@
 @media (max-width: 768px) {
   .hero__header{
     align_item:center;
-    justify-content: center
+    justify-content: center;
   }
   .hero__greet {  
     font-size:30px;

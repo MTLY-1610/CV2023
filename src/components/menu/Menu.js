@@ -1,8 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
-import { gsap } from 'gsap';
+import gsap  from 'gsap';
 import styles from './Menu.module.css';
-import Image from "next/image";
-import smiley from 'public/img/smiley.png';
 
 const AnimatedMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +16,7 @@ const AnimatedMenu = () => {
   const musicPlayerRef = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({delay: 5});
+    const tl = gsap.timeline({delay: 4});
 
     tl.to([menuItem1.current, menuItem4.current], { opacity: 1, duration: 0.2, ease: "power3.out"})
       .to([menuItem2.current, menuItem5.current], { opacity: 1, duration: 0.2, ease: "power3.out" })
