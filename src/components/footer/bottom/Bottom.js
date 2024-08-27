@@ -1,6 +1,9 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from 'gsap';
 import styles from './Bottom.module.css';
+import Image from "next/image";
+import linkedin from 'public/img/logo__linkedin.svg';
+import github from 'public/img/logo__github.svg';
 
 
 const Bottom = () => {
@@ -28,27 +31,37 @@ const Bottom = () => {
 
   return (
     <div className={styles.bottom__wrapper}>
-            <div className={styles.bottom__border}>
+      <div className={styles.bottom__border}>
       </div>
 
       <div className={styles.bottom__items}>
-      <div className={styles.bottom__items__left}>
-        <span>item</span>
-        <span>item</span>
-        <span>item</span>
-        <span>item</span>
+        <div className={styles.bottom__items__left}>
+          <span>
+            <Image
+              className={styles.linkedin}
+              src={linkedin}
+              alt="linkedin logo"
+            />
+          </span>
+          <span>
+            <Image
+              className={styles.github}
+              src={github}
+              alt="github logo"
+            />
+          </span>
         </div>
         <div className={styles.bottom__items__center}>
-        <span>item</span>
-        <span>item</span>
-        <span>item</span>
-        <span>item</span>
+          <span>item</span>
+          <span>item</span>
+          <span>item</span>
+       
         </div>
         <div className={styles.bottom__items__right}>
-        <span>item</span>
-        <span>item</span>
-        <span>item</span>
-        <span>item</span>
+          <span>MATHIEU LARROUY</span>
+          <span></span>
+          <span>design @mathieul</span>
+          <span>dev @mathieul</span>
         </div>
       </div>
     </div>

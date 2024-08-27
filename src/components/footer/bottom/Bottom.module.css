@@ -68,15 +68,38 @@
     align-item: center;
     justify-content: space-between;
     font: 300 12px/22px 'Helvetica Neue' ;
-
   }
   
-  .bottom__items__left, .bottom__items__center, .bottom__items__right{
+  .bottom__items__left{
     display:flex;
     flex-direction: column;
+    align-items:center;
+    justify-content:space-around;
+  }
+  .bottom__items__center{
+    width: 10vw;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .bottom__items__right{
+    display:flex;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content:center;
 
   }
-  
+
+  .linkedin{
+    width: 2.5vw;
+    height:auto;
+  }
+  .github{
+    width: 2vw;
+    height:auto;
+  }
+
   @media (max-width: 768px) {
     .menu__wrapper {
       height: 18vh;
