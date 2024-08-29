@@ -49,7 +49,7 @@ const AnimatedMenu = () => {
             MATHIEU LARROUY
           </span>
           <span ref={menuItem2} className={styles.menu__name}>
-            Frontend developer
+            UI developer
           </span>
           <span ref={menuItem3} className={styles.menu__name}>
             UI designer
