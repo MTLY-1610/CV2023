@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import gsap  from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import styles from './HorizSection.module.css'
 
 function HorizSection() {
