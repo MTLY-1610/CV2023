@@ -7,8 +7,9 @@ const SectionOne = () => {
   return (
     <div className={styles.section__wrapper}>
       <div className={styles.section__inner__wrapper_1}>
-        UI     
-        development
+        
+        <h1>UI     
+        development</h1>
       </div>
     </div>
   );
