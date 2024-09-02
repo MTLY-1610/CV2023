@@ -4,7 +4,7 @@ body,
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: var(--green7726c);
+  background-color: var(--bgBlack);
 
   /* font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
@@ -12,7 +12,7 @@ body,
 
 
 :root {
-  --backgroundColor: #B1B3B3;
+  --bgBlack: #1c1c1c;
   --coolGray5c: #B1B3B3;
   --coolGray11c: #53565A;
   --coolGray1c: #D9D9D6;

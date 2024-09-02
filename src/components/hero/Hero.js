@@ -4,6 +4,7 @@ import styles from './Hero.module.css';
 import Image from "next/image";
 import smiley from 'public/img/smiley.png';
 
+
 const Hero = () => {
   const heroGreet = useRef([]);
   const heroPitchSentenceOne = useRef([]);
@@ -63,6 +64,7 @@ const Hero = () => {
 
   return (
     <div className={styles.hero__header}>
+      {/* <div className={styles.header__spacer}></div> */}
       <div className={styles.hero__greet}>
         {"BONJOUR".split("").map((letter, index) => (
           <span
