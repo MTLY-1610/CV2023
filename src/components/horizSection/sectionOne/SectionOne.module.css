@@ -1,0 +1,19 @@
+.section__wrapper{
+    display:flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    background-color: none;
+    align-items: flex-end;
+    justify-content:center;
+}
+
+.section__inner__wrapper_1{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    width: 90vw;
+    height: 70vh;
+    border-bottom: solid 2px var(--coolGray1c);
+}

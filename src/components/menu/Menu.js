@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import gsap  from 'gsap';
 import styles from './Menu.module.css';
 
-const AnimatedMenu = () => {
+const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItem1 = useRef(null);
@@ -11,19 +11,13 @@ const AnimatedMenu = () => {
   const menuItem4 = useRef(null);
   const menuItem5 = useRef(null);
   const menuItem6 = useRef(null);
-  const menuItem7 = useRef(null);
-  const menuItem8 = useRef(null);
-  const musicPlayerRef = useRef(null);
 
   useEffect(() => {
     const tl = gsap.timeline({delay: 4});
 
-    tl.to([menuItem1.current, menuItem4.current], { opacity: 1, duration: 0.2, ease: "power3.out"})
-      .to([menuItem2.current, menuItem5.current], { opacity: 1, duration: 0.2, ease: "power3.out" })
-      .to([menuItem3.current, menuItem6.current], { opacity: 1, duration: 0.2, ease: "power3.out" })
-      .to(menuItem7.current, { opacity: 1, duration: 0.2, ease: "power3.out" })
+    tl.to([menuItem1.current, menuItem2.current, menuItem3.current, menuItem4.current, menuItem5.current], { opacity: 1, duration: 0.2, ease: "power3.out"})
       .fromTo(
-        menuItem8.current,
+        menuItem6.current,
         { scaleX: 0, transformOrigin: "center" },
         { scaleX: 1, duration: 0.75, ease: "power3.out" }
       );
@@ -46,22 +40,25 @@ const AnimatedMenu = () => {
       <div className={styles.menu__items}>
         <div className={styles.menu__item__left}>
           <span ref={menuItem1} className={styles.menu__name__first}>
-            MATHIEU LARROUY
+          MTLY
           </span>
-          <span ref={menuItem2} className={styles.menu__name}>
-            Frontend developer
+        </div>
+        <div className={styles.menu__item__center}>
+        <span ref={menuItem2} className={styles.menu__name}>
+            UI DEVELOPMENT
           </span>
           <span ref={menuItem3} className={styles.menu__name}>
-            UI designer
+          UI DESIGN
+          </span>
+        </div>
+        <div className={styles.menu__item__center}>
+          <span ref={menuItem4} className={styles.menu__name}>
+   LOGO HERE
           </span>
         </div>
         <div className={styles.menu__item__right}>
-          <span ref={menuItem4} className={styles.menu__burger}>
-            Frontend stack
-          </span>
+
           <span ref={menuItem5} className={styles.menu__burger}>
-            UID stack          </span>
-          <span ref={menuItem6} className={styles.menu__burger__last}>
             BEEP ME
           </span>
         </div>
@@ -88,9 +85,9 @@ const AnimatedMenu = () => {
           </div>
         )}
       </div>
-      <div ref={menuItem8} className={styles.menu__border}></div>
+      <div ref={menuItem6} className={styles.menu__border}></div>
     </div>
   );
 };
 
-export default AnimatedMenu;
+export default Menu;

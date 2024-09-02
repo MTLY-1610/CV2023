@@ -40,7 +40,7 @@
   .bottom__wrapper {
     bottom: 0;
     width: 100%;
-    height: 30vh;
+    height: 18vh;
     min-height:145px;
     display: flex;
     position-self: flex-end;
@@ -54,12 +54,12 @@
     background:none;
   }
   
-  .bottom__border {
+  /* .bottom__border {
     width: 100%;
     height: 1px;
     background-color: var(--coolGray1c);
     transform-origin: center;
-  }
+  } */
 
   .bottom__items{
     width:100%;
