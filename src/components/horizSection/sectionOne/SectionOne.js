@@ -7,11 +7,16 @@ const SectionOne = () => {
     return (
         <div className={styles.section__wrapper}>
             <div className={styles.section__inner__wrapper_1}>
-                <div className={styles.section__inner__wrapper_top}>
-                    <div className={styles.inner__wrapper_top__left}>
+                <div className={styles.section__inner__wrapper__top}>
+                    <div className={styles.inner__wrapper__top__left}>
                     </div>
-                    <div className={styles.inner__wrapper_top__right}>
-                        <div className={styles.left__collaps__1}></div>
+                    <div className={styles.inner__wrapper__top__right}>
+                        <div className={styles.left__collaps__1}>
+                            <h2>
+                                STACK
+                            </h2>
+                            <p>01</p>
+                        </div>
                         <div className={styles.left__collaps__2}></div>
                         <div className={styles.left__collaps__3}></div>
                     </div>

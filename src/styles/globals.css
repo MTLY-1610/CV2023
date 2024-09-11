@@ -18,15 +18,12 @@ body,
   --coolGray1c: #D9D9D6;
   --black3c: #212721;
   --green7726c: #007B4B;
-  --headlineBig: clamp(5rem, 9.9vw, 15rem);
+  --headlineBig: clamp(5rem, 7.2vw, 15rem);
   --headlineMedium: clamp(1rem, 2vw, 4rem);
   --headlineSmall: clamp(0.6rem, 0.75vw, 1.3rem);
   --spacing: clamp(0.9rem, 0.75vw, 1.3rem);
 }
 
-.body {
-
-}
 
 .scroll-section-outer {
   overflow: hidden;
