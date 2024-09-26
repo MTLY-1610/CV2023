@@ -1,17 +1,4 @@
-@font-face {
-  font-family: 'Ogg';
-  src: url('../../../public/fonts/Ogg-Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Ogg';
-  src: url('../../../public/fonts/Ogg-BoldItalic.woff2') format('woff2');
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
+
 .scroll_section__outer {
     overflow: hidden;
 
@@ -33,15 +20,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font:  bold  4vw/1em 'Ogg';
-    color: var(--coolGray1c);
-    text-transform:uppercase;
-
   }
   
-  /* .scroll-section h3 {
-    color: var(--primaryTextColor);
-    letter-spacing: var(--headlineMedium);
-    font-size: var(--headlineMedium);
-    text-transform: uppercase;
-  } */

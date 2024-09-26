@@ -1,13 +1,99 @@
+@font-face {
+  font-family: 'Ogg-bold';
+  src: url('../../public/fonts/Ogg-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogg-bold-ita';
+  src: url('../../public/fonts/Ogg-BoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../../public/fonts/HelveticaNeue-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../../public/fonts/HelveticaNeue-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../../public/fonts/HelveticaNeue-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../../public/fonts/HelveticaNeue-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../../public/fonts/HelveticaNeue-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Slussen-Extended Black-Extd';
+  src: url('../../public/fonts/Slussen-Extended-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Slussen-Extended Thin-Extd';
+  src: url('../../public/fonts/Slussen-Extended-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Slussen-Extended Medium-Extd';
+  src: url('../../public/fonts/Slussen-Extended-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Slussen-Extended';
+  src: url('../../public/fonts/Slussen-Extended-BlackItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+
 html,
 body,
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: var(--bgBlack);
 
   /* font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+}
+body{
+color: var(--coolGray1c);
+cursor: url('/img/pointer.png'), auto;
 }
 
 
@@ -18,10 +104,11 @@ body,
   --coolGray1c: #D9D9D6;
   --black3c: #212721;
   --green7726c: #007B4B;
-  --headlineBig: clamp(5rem, 7.2vw, 15rem);
-  --headlineMedium: clamp(1rem, 2vw, 4rem);
-  --headlineSmall: clamp(0.6rem, 0.75vw, 1.3rem);
-  --spacing: clamp(0.9rem, 0.75vw, 1.3rem);
+  --headlineBig: clamp( 1rem, 6vw, 15rem);
+  --headlineMedium: clamp(3rem, 2vw, 4rem);
+  --headlineSmall: clamp(1rem, 1vw, 1rem);
+
+  --SlExM: 'Slussen-Extended Medium-Extd';
 }
 
 

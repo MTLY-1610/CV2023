@@ -1,17 +1,4 @@
-  @font-face {
-    font-family: 'Ogg';
-    src: url('../../../public/fonts/Ogg-Bold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Ogg';
-    src: url('../../../public/fonts/Ogg-BoldItalic.woff2') format('woff2');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-  }
+
 
   /* _________________________________________________________________________ */
 
@@ -47,6 +34,7 @@
   }
 
   .hero__pitch {  
+    top: 20%;
     font:  bold  4vw/1em 'Ogg';
     display: flex;
     flex-direction: column;
@@ -54,6 +42,8 @@
     gap: .5em;
     padding:2rem;
     position: absolute;
+    text-align:center;
+    line-height:4.5vw;
   }
 
   .hero__word {
@@ -63,6 +53,7 @@
     display: inline-block;
     margin-right: 1vw;
 
+
   }
 
   .hero__image {
@@ -70,6 +61,7 @@
     vertical-align: middle;
     width: 3.3vw;
     height:auto;
+    opacity: .25;
   }
 
 
@@ -95,8 +87,10 @@
       font-size:30px;
     }
     .hero__pitch {  
+      top:23%;
       width:100%;
       font-size:25px;
+      line-height: 30px;
     }
     .hero__image {
       display: inline-block;

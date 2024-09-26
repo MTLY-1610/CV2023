@@ -82,7 +82,7 @@
   font-size: 1rem;
   color: var(--coolGray1c);
   z-index: 100;
-  background:none;
+
 }
 
 .menu__items {
@@ -91,7 +91,7 @@
   align-items: center;
   justify-content: space-between;
   background:none;
-  padding:0 1rem
+  padding:0 1rem;
 }
 
 .menu__item__left,
@@ -128,6 +128,7 @@
   opacity:0;
   font: 900 italic 30px/22px 'Slussen-Extended' ;
   font-family: 'Slussen-Extended';
+  letter-spacing: -3px;
 }
 
 .menu__border {
@@ -177,16 +178,16 @@
 
 .fullscreenMenu {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
   padding: 20px;
+  background-color: white;
 }
 
 .fullscreenMenuContent {
@@ -203,9 +204,10 @@
   .menu__wrapper {
     height: 18vh;
   }
-  .menu__item__right {
+  .menu__item__right, .menu__item__center {
     display: none;
   }
+  
   .burgerMenu {
     display: block;
   }
@@ -224,4 +226,5 @@
   .fullscreenMenu {
     display: none;
   }
+
 }
