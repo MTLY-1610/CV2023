@@ -5,60 +5,71 @@
     height: 100%;
     background-color: none;
     align-items: center;
-    justify-content:center;
+    justify-content:space-around;
+    background: white;
+    padding-top: 5%;
+    
 }
 .section__name{
     display: flex;
-    font-size: var(--headlineBig);
-}
-
-.section__inner__wrapper_1{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-    width: 100vw;
-    height: 70vh;    
-    padding: 2rem;
-}
-.section__inner__wrapper__top{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:space-between;
     width: 100%;
-    height: 50vh;
-
-}
-
-.inner__wrapper__top__left{
-    display:flex;
-    flex-direction: column;
     align-items: center;
-    justify-content:center;
-    width: 60%;
-    height: 40vh;
-    border:1px solid var(--coolGray1c);
+    justify-content: center;
+    font-family: 'Slussen-Extended Black-Extd';
+    font-size: 20vw;
+    white-space: nowrap;
+    
 }
-
-.inner__wrapper__top__right{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:flex-start;
-    width: 30%;
-    height: 40vh;
-    /* border:1px solid var(--coolGray1c); */
-
-}
-
-.left__collaps__1, .left__collaps__2, .left__collaps__3{
+.collaps__wrapper{
+    width: 100%;
+    min-height: 50%;
     display: flex;
-    width: 100%;
-    flex-direction: row;
+    flex-direction: column;
+    font-family: 'Helvetica Neue';
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.collaps__one, .collaps__two, .collaps__three{
+    width: 80%;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Helvetica Neue';
     align-items: center;
     justify-content: space-between;
-    font-size: var(--headlineMedium);
+    
+}
+.collaps__content{
+    width: 100%;
+    height:10vh;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Slussen-Extended Black-Extd';
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.separator{
+  width: 100%;
+  height: 1px;
+  background-color: var(--coolGray1c);
+  transform-origin: center;
+}
+.collaps__one__paragraph, .collaps__two__paragraph, .collaps__three__paragraph {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    font-family: 'Slussen-Extended Medium-Extd';
+    font-size: 2vh;
+    line-height: 2vh;
+    color: var(--coolGray1c);
+ 
+  
+    /* opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease; */
 }
 
 

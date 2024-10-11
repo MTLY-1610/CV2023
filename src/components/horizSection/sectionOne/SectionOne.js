@@ -38,7 +38,7 @@ const SectionOne = () => {
                 currentElement,
                 { height: 0, opacity: 0 },
                 {
-                    height: '10vh',
+                    height: '12vh',
                     opacity: 1,
                     duration: 0.6,
                     ease: "power2.inOut",
@@ -96,6 +96,9 @@ const SectionOne = () => {
                     </div>
                     <div className={styles.separator}></div>
                 </div>
+            </div>
+            <div className={styles.section__name}>
+                DEVPT
             </div>
         </div>
     );

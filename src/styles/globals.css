@@ -104,6 +104,7 @@ cursor: url('/img/pointer.png'), auto;
   --coolGray1c: #D9D9D6;
   --black3c: #212721;
   --green7726c: #007B4B;
+  --pink677c: #E5CEDB;
   --headlineBig: clamp( 1rem, 6vw, 15rem);
   --headlineMedium: clamp(3rem, 2vw, 4rem);
   --headlineSmall: clamp(1rem, 1vw, 1rem);

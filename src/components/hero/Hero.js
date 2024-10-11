@@ -47,7 +47,7 @@ const Hero = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const targetOpacity = scrollY > 50 ? 0 : 1;
+      const targetOpacity = scrollY > 950 ? 0 : 1;
 
       gsap.to([heroPitchSentenceOne.current, heroPitchSentenceTwo.current, smileyRef.current], {
         opacity: targetOpacity,
