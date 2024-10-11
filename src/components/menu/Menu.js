@@ -43,7 +43,7 @@ const Menu = () => {
           MTLY
           </span>
         </div>
-        <div className={styles.menu__item__center}>
+        <div className={styles }>
         <span ref={menuItem2} className={styles.menu__name}>
             UI DEVELOPMENT
           </span>
@@ -86,6 +86,16 @@ const Menu = () => {
         )}
       </div>
       <div ref={menuItem6} className={styles.menu__border}></div>
+      <div className={styles.marquee}>
+        <div className={styles.marquee__inner}>
+          <span>Some darn text example to sell myself! - Some darn text example to sell myself! - Some darn text example to sell myself! !&nbsp;</span>
+          <span>Some darn text example to sell myself! - Some darn text example to sell myself! - Some darn text example to sell myself! !&nbsp;</span>
+          <span>Some darn text example to sell myself! - Some darn text example to sell myself! - Some darn text example to sell myself! !&nbsp;</span>
+          <span>Some darn text example to sell myself! - Some darn text example to sell myself! - Some darn text example to sell myself! !&nbsp;</span>
+          
+          
+        </div>
+      </div>
     </div>
   );
 };
