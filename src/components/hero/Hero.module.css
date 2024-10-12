@@ -34,8 +34,8 @@
   }
 
   .hero__pitch {  
-    top: 20%;
-    font:  bold  4vw/1em 'Ogg';
+    top: 15%;
+    font:  bold  5.3vw 'Ogg';
     display: flex;
     flex-direction: column;
     width: 85vw;
@@ -43,7 +43,7 @@
     padding:2rem;
     position: absolute;
     text-align:center;
-    line-height:4.5vw;
+    line-height:4vw;
   }
 
   .hero__word {
@@ -87,9 +87,9 @@
       font-size:30px;
     }
     .hero__pitch {  
-      top:23%;
+      top:13%;
       width:100%;
-      font-size:25px;
+      font-size: 5vh;
       line-height: 30px;
     }
     .hero__image {
@@ -100,6 +100,9 @@
     }
   }
 
-  @media (min-width: 769px) {
+  @media (max-width: 769px) {
+
+  }
+  @media (min-width: 1000px) {
 
   }
