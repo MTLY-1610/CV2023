@@ -1,14 +1,14 @@
 import React from "react";
 import styles from './Footer.module.css'
 import ContactForm from "./contactform/ContactForm";
-import Bottom from "./bottom/Bottom"
+import Bottom from "./Bottom"
 
 function Footer() {
   return (
-    <div className={styles.footer}>
+    <section id="sectionFive" className={styles.footer}>
       {/* <ContactForm /> */}
       <Bottom />
-    </div>
+    </section>
   );
 }
 

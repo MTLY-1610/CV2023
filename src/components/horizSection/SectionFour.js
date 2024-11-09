@@ -1,9 +1,9 @@
 import React, { useRef,useState, useEffect } from "react";
 import gsap  from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import styles from './SectionTwo.module.css'
+import styles from './HorizSection.module.css'
 
-const SectionTwo = () => {
+const SectionFour = () => {
     const [activeIndex, setActiveIndex] = useState(null);
     const refs = useRef([]);
 
@@ -51,7 +51,7 @@ const SectionTwo = () => {
     };
 
     return (
-        <div className={styles.section__wrapper}>
+        <div id="section4" className={styles.section__wrapper}>
         
             <div className={styles.collaps__wrapper}>
                 <div className={styles.collaps__one}>
@@ -100,11 +100,10 @@ const SectionTwo = () => {
                 </div>
             </div>
             <div className={styles.section__name}>
-                DESIGN
+            ↓
             </div>
         </div>
     );
 };
 
-
-export default SectionTwo;
+export default SectionFour;

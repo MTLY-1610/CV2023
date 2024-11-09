@@ -4,105 +4,52 @@
 
   .hero__header {
     height: 100vh;
+    width:100%;
     display: flex;
-    padding: 2rem;
+    align-self: flex-end;
+    padding: 12vh 2rem 2rem 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     display: flex;
     color: var(--coolGray1c);
+    background-color:var(--electric-violet);
+    font-family:'Ogg-bold';
+    font-size: 14vw;
+    line-height: 9vw;
   }
+.quote{
+  font-family:'Druk Wide LCG';
+  vertical-align: text-top;
+  align-self: flex-start;
+  font-size: 5vw;
+
+}
+.p__one{
+  text-align: right;
+
+}
+.hero__image{
+  height: 4vw;
+  width: auto;
+  opacity: .2;
+}
 
 
-  .hero__greet{
-    height:100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-    padding:2rem;
-    position: absolute;
-    text-align: center;
-    font: bold  10vw/30px 'Ogg';
+@media (min-width: 1250px) {
+.hero__header {
+    height: 100vh;
+    font-family:'Ogg-bold';
+    font-size: 7vw;
+    line-height: 6vw;
   }
-
-  .hero__letter {
-    opacity: 0;
-    display: inline-block; /* Ensure the letters are inline */
-    transition: opacity 0.5s ease; /* Optional smooth transition */
-    z-index:100
+}
+@media (730px <= width <= 1250px) {
+  .hero__header {
+    height: 88vh;
+    margin-top: 12vh;
+    font-family:'Ogg-bold';
+    font-size: 14vw;
+    line-height: 9vw;
   }
-
-  .hero__pitch {  
-    top: 15%;
-    font:  bold  5.3vw 'Ogg';
-    display: flex;
-    flex-direction: column;
-    width: 85vw;
-    gap: .5em;
-    padding:2rem;
-    position: absolute;
-    text-align:center;
-    line-height:4vw;
-  }
-
-  .hero__word {
-    opacity:0;
-    background: none;
-    display: flex;
-    display: inline-block;
-    margin-right: 1vw;
-
-
-  }
-
-  .hero__image {
-    display: inline-block;
-    vertical-align: middle;
-    width: 3.3vw;
-    height:auto;
-    opacity: .25;
-  }
-
-
-
-  /* .hero__hover {
-    color: inherit; 
-    cursor: pointer; 
-    position: relative; 
-    height: 1em;
-  }
-
-  .hero__image {
-    max-width: 300px; 
-    z-index: 100; 
-  } */
-
-  @media (max-width: 768px) {
-    .hero__header{
-      align_item:center;
-      justify-content: center;
-    }
-    .hero__greet {  
-      font-size:30px;
-    }
-    .hero__pitch {  
-      top:13%;
-      width:100%;
-      font-size: 5vh;
-      line-height: 30px;
-    }
-    .hero__image {
-      display: inline-block;
-      vertical-align: middle;
-      min-width: 25px;
-      height:auto;
-    }
-  }
-
-  @media (max-width: 769px) {
-
-  }
-  @media (min-width: 1000px) {
-
-  }
+}

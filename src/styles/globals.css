@@ -80,6 +80,34 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Druk Wide LCG';
+  src: url('../../public/fonts/DrukWideLCG-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bgBlack: #1c1c1c;
+  --coolGray5c: #B1B3B3;
+  --coolGray11c: #53565A;
+  --coolGray1c: #D9D9D6;
+  --black3c: #212721;
+  --green7726c: #007B4B;
+  --pink677c: #E5CEDB;
+  --milk: #fff;
+  --bone: #f7f5f2;
+  --lemon: #efff70;
+  --electric-violet: #533fff;
+  --lavendel: #dad9fd;
+  --indigo: #392457;
+  --beige: #eee7dc;
+  --headlineBig: clamp( 1rem, 6vw, 15rem);
+  --headlineMedium: clamp(3rem, 2vw, 4rem);
+  --headlineSmall: clamp(1rem, 1vw, 1rem);
+  --SlExM: 'Slussen-Extended Medium-Extd';
+}
 
 html,
 body,
@@ -92,25 +120,12 @@ body,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 body{
-color: var(--coolGray1c);
+color: var(--electric-violet);
 cursor: url('/img/pointer.png'), auto;
 }
 
 
-:root {
-  --bgBlack: #1c1c1c;
-  --coolGray5c: #B1B3B3;
-  --coolGray11c: #53565A;
-  --coolGray1c: #D9D9D6;
-  --black3c: #212721;
-  --green7726c: #007B4B;
-  --pink677c: #E5CEDB;
-  --headlineBig: clamp( 1rem, 6vw, 15rem);
-  --headlineMedium: clamp(3rem, 2vw, 4rem);
-  --headlineSmall: clamp(1rem, 1vw, 1rem);
 
-  --SlExM: 'Slussen-Extended Medium-Extd';
-}
 
 
 .scroll-section-outer {

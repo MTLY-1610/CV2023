@@ -1,9 +1,8 @@
-import React, { useRef,useState, useEffect } from "react";
-import gsap  from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import styles from './SectionFour.module.css'
+import React, { useState, useRef } from "react";
+import gsap from "gsap";
+import styles from './HorizSection.module.css';
 
-const SectionFour = () => {
+const SectionOne = () => {
     const [activeIndex, setActiveIndex] = useState(null);
     const refs = useRef([]);
 
@@ -52,7 +51,6 @@ const SectionFour = () => {
 
     return (
         <div className={styles.section__wrapper}>
-        
             <div className={styles.collaps__wrapper}>
                 <div className={styles.collaps__one}>
                     <div className={styles.collaps__content} onClick={() => toggleContent(1)}>
@@ -100,10 +98,10 @@ const SectionFour = () => {
                 </div>
             </div>
             <div className={styles.section__name}>
-            ↓
+                DEVPT
             </div>
         </div>
     );
 };
 
-export default SectionFour;
+export default SectionOne;

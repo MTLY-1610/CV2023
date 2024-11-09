@@ -42,9 +42,90 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background: none;
+    background: var(--lemon);
   }
   
   .footer h1 {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-family:'Druk Wide LCG';
+
+  }
+    
+  .bottom__wrapper {
+    bottom: 0;
+    width: 100%;
+    height: 18vh;
+    min-height:145px;
+    display: flex;
+    position-self: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    font-size: 1rem;
+    color: var(--bgBlack);
+    z-index: 100;
+    background:none;
+  }
+  
+  /* .bottom__border {
+    width: 100%;
+    height: 1px;
+    background-color: var(--coolGray1c);
+    transform-origin: center;
+  } */
+
+  .bottom__items{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    align-item: center;
+    justify-content: space-between;
+    font: 300 22px/22px 'Druk Wide LCG' ;
+  }
+  
+  .bottom__items__left{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:space-around;
+  }
+  .bottom__items__center{
+    width: 10vw;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .bottom__items__right{
+    display:flex;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content:center;
+
+  }
+
+  .linkedin{
+    width: 2.5vw;
+    height:auto;
+  }
+  .github{
+    width: 2vw;
+    height:auto;
+  }
+
+  @media (max-width: 768px) {
+    .menu__wrapper {
+      height: 18vh;
+    }
+    .menu__item__right {
+      display: none;
+    }
+    .burgerMenu {
+      display: block;
+    }
+  
+  }
+  
+  @media (min-width: 769px) {
+
   }

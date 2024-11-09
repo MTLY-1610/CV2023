@@ -1,9 +1,9 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef,useState, useEffect } from "react";
 import gsap  from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import styles from './SectionThree.module.css'
+import styles from './HorizSection.module.css'
 
-const SectionThree = () => {
+const SectionTwo = () => {
     const [activeIndex, setActiveIndex] = useState(null);
     const refs = useRef([]);
 
@@ -100,10 +100,11 @@ const SectionThree = () => {
                 </div>
             </div>
             <div className={styles.section__name}>
-                ME & I
+                DESIGN
             </div>
         </div>
     );
 };
 
-export default SectionThree;
+
+export default SectionTwo;
