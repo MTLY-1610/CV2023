@@ -88,30 +88,8 @@ const Menu = () => {
       observer.observe(section);
       return observer;
     });
-
-    // // Separate observer specifically for scrolling up on section four
-    // const observerUpForSectionFour = new IntersectionObserver(
-    //   (entries) => {
-    //     entries.forEach((entry) => {
-    //       if (entry.isIntersecting && entry.boundingClientRect.top > 0) {
-    //         console.log("Section Four scrolled up into view"); // Debugging log
-    //         handleColorChange("#FF5733", "#FF5733");  // Special color for scrolling up on section four
-    //       }
-    //     });
-    //   },
-    //   { rootMargin: "-100% 0px 0% 0px", threshold: 0 } // Adjusted observer options
-    // );
-
-    // Observe only section four for the scroll-up observer
-    // const sectionFour = document.getElementById("sectionFour");
-    // if (sectionFour) {
-    //   observerUpForSectionFour.observe(sectionFour);
-    // }
-
-    // Cleanup all observers on component unmount
     return () => {
       observersDown.forEach((observer) => observer.disconnect());
-  
     };
   }, []);
 
