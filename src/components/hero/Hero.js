@@ -11,7 +11,7 @@ const Hero = () => {
       <p className={styles.p__one}><sup className={styles.quote}>,,</sup> My name is Mathieu but people call me Matt.
       I am a french UI designer and developer. 
       </p> 
-      <p className={styles.p__one}>I like to cool and user-centric interfaces.   <Image
+      <p className={styles.p__one}>I like make   cool and user-centric interfaces.   <Image
               src={smiley}
               alt="Fancy display for superficial people"
               className={styles.hero__image}

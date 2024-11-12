@@ -1,29 +1,51 @@
+  /*______________________________GLOBAL*/  
 
+.scroll_section__outer {
+  overflow: hidden;
+}
 
-
+.scroll_section__inner {
+  height: 100vh;
+  width: 400vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  algn-items: center;
+  justify-content:center;
+}
+  
+.scroll_section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  /*______________________________SECTIONS*/  
 .section__wrapper{
   display:flex;
   flex-direction: column;
   width: 100vw;
   height: 100%;
+  padding: 2rem;
   background-color: none;
   align-items: center;
-  justify-content:space-around;
+  justify-content:space-between;
   background: white;
   padding-top: 5%;
   background-color: var(--beige);
-  
 }
+
 .section__name{
   display: flex;
-  width: 100%;
+  width: 100vw;
   align-items: center;
   justify-content: center;
-  font-family: 'Slussen-Extended Black-Extd';
-  font-size: 20vw;
+  font-family: 'Druk Wide LCG';
+  font-size: 16vw;
   white-space: nowrap;
-  
 }
+
 .collaps__wrapper{
   width: 100%;
   min-height: 50%;
@@ -31,11 +53,10 @@
   flex-direction: column;
   font-family: 'Helvetica Neue';
   align-items: center;
-  justify-content: space-around;
-  
+  justify-content: space-around; 
 }
 .collaps__one, .collaps__two, .collaps__three{
-  width: 80%;
+  width: 100%;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -55,10 +76,10 @@
   
 }
 .separator{
-width: 100%;
-height: 1px;
-background-color: var(--electric-violet);
-transform-origin: center;
+  width: 100%;
+  height: 1px;
+  background-color: var(--electric-violet);
+  transform-origin: center;
 }
 .collaps__one__paragraph, .collaps__two__paragraph, .collaps__three__paragraph {
   display: flex;
@@ -71,40 +92,14 @@ transform-origin: center;
   line-height: 2vh;
   color: var(--coolGray1c);
   background-color: var(--lemon);
-margin-bottom: 1em;
-
-
-  /* opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease; */
+  margin-bottom: 1em;
 }
 
 .collaps__one__paragraph:target {
 
 }
 
+  /*______________________________MEDIA QUERIES*/  
 
 
-.scroll_section__outer {
-    overflow: hidden;
-
-  }
-.scroll_section__inner {
-    height: 100vh;
-    width: 400vw;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    algn-items: center;
-    justify-content:center;
-  }
-  
-  
-  .scroll_section {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   

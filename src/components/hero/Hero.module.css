@@ -18,7 +18,7 @@
     font-size: 14vw;
     line-height: 9vw;
   }
-.quote{
+  .quote{
   font-family:'Druk Wide LCG';
   vertical-align: text-top;
   align-self: flex-start;
@@ -32,10 +32,10 @@
 .hero__image{
   height: 4vw;
   width: auto;
-  opacity: .2;
+  opacity: 1;
 }
 
-
+  /*______________________________MEDIA QUERIES*/  
 @media (min-width: 1250px) {
 .hero__header {
     height: 100vh;

@@ -8,7 +8,6 @@ import github from 'public/img/logo__github.svg';
 
 const Bottom = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const bottomItem1 = useRef(null);
   const bottomItem2 = useRef(null);
   const bottomItem3 = useRef(null);
@@ -17,11 +16,9 @@ const Bottom = () => {
   const bottomItem6 = useRef(null);
   const bottomItem7 = useRef(null);
   const bottomItem8 = useRef(null);
-  const musicPlayerRef = useRef(null);
 
   useEffect(() => {
     const tl = gsap.timeline({ delay: 5 });
-
 
     return () => {
       tl.kill();
@@ -31,9 +28,6 @@ const Bottom = () => {
 
   return (
     <div className={styles.bottom__wrapper}>
-      <div className={styles.bottom__border}>
-      </div>
-
       <div className={styles.bottom__items}>
         <div className={styles.bottom__items__left}>
           <span>
@@ -52,10 +46,10 @@ const Bottom = () => {
           </span>
         </div>
         <div className={styles.bottom__items__center}>
-          <span>item</span>
+          <span>top</span>
         </div>
         <div className={styles.bottom__items__right}>
-          <span>MATHIEU LARROUY</span>
+          <span>MTLY</span>
          
         </div>
       </div>

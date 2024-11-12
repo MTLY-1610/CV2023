@@ -1,3 +1,5 @@
+  /*______________________________FONTS*/  
+
 @font-face {
   font-family: 'Ogg-bold';
   src: url('../../public/fonts/Ogg-Bold.woff2') format('woff2');
@@ -106,7 +108,6 @@
   --headlineBig: clamp( 1rem, 6vw, 15rem);
   --headlineMedium: clamp(3rem, 2vw, 4rem);
   --headlineSmall: clamp(1rem, 1vw, 1rem);
-  --SlExM: 'Slussen-Extended Medium-Extd';
 }
 
 html,
@@ -115,18 +116,11 @@ body,
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
-  /* font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 body{
 color: var(--electric-violet);
-cursor: url('/img/pointer.png'), auto;
+cursor: url('/img/pointer.svg'), auto;
 }
-
-
-
-
 
 .scroll-section-outer {
   overflow: hidden;
