@@ -9,7 +9,6 @@ import quote from 'public/img/quote.svg'
 const Hero = () => {
   return (
     <section id='sectionZero' className={styles.hero__header}>
-      <div
       <div className={styles.quote__wrapper}>
         <Image
                src={quote}
