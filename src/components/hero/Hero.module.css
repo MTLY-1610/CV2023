@@ -2,30 +2,44 @@
 
   /* _________________________________________________________________________ */
 
-  .hero__header {
-    height: 100vh;
-    width:100%;
-    display: flex;
-    align-self: flex-end;
-    padding: 12vh 2rem 2rem 2rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: var(--coolGray1c);
-    background-color:var(--electric-violet);
-    font-family:'Ogg-bold';
-    font-size: 14vw;
-    line-height: 9vw;
-  }
-  .quote{
-  font-family:'Druk Wide LCG';
-  vertical-align: text-top;
-  align-self: flex-start;
-  font-size: 5vw;
-
+.hero__header {
+  height: 100vh;
+  width:100%;
+  display: flex;
+  align-self: flex-end;
+  padding: 12vh 2rem 2rem 2rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: var(--coolGray1c);
+  background-color:var(--electric-violet);
+  font-family:'Ogg-bold';
+  font-size: 14vw;
+  line-height: 9vw;
 }
-.p__one{
+
+
+  /*______________________________MEDIA QUERIES*/  
+  @media (max-width: 730px) {
+.hero__header {
+    height: 100vh;
+    font-family:'Ogg-bold';
+    font-size: 7vw;
+    line-height: 6vw;
+  }
+  .quote__wrapper{
+  display:flex;
+  justify-content: flex-start;
+  padding-left: 5%;
+  height:80vh;
+  width:10%;
+}
+.text__wrapper{
+  display:flex;
+  justify-content: flex-start;
+  height:70vh;
+  width:90%;
   text-align: right;
 
 }
@@ -34,8 +48,7 @@
   width: auto;
   opacity: 1;
 }
-
-  /*______________________________MEDIA QUERIES*/  
+}
 @media (min-width: 1250px) {
 .hero__header {
     height: 100vh;
@@ -43,13 +56,52 @@
     font-size: 7vw;
     line-height: 6vw;
   }
+  .quote__wrapper{
+  display:flex;
+  justify-content: flex-start;
+  padding-left: 5%;
+  height:80vh;
+  width:10%;
+}
+.text__wrapper{
+  display:flex;
+  justify-content: flex-start;
+  height:70vh;
+  width:90%;
+  text-align: right;
+
+}
+.hero__image{
+  height: 4vw;
+  width: auto;
+  opacity: 1;
+}
 }
 @media (730px <= width <= 1250px) {
   .hero__header {
-    height: 88vh;
-    margin-top: 12vh;
+    height: 100vh;
     font-family:'Ogg-bold';
-    font-size: 14vw;
-    line-height: 9vw;
+    font-size: 10vw;
+    line-height: 8vw;
   }
+  .quote__wrapper{
+  display:flex;
+  justify-content: flex-start;
+  padding-left: 5%;
+  height:80vh;
+  width:10%;
+}
+.text__wrapper{
+  display:flex;
+  justify-content: flex-start;
+  height:70vh;
+  width:90%;
+  text-align: right;
+
+}
+.hero__image{
+  height: 4vw;
+  width: auto;
+  opacity: 1;
+}
 }
