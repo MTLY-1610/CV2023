@@ -15,21 +15,25 @@ const Menu = () => {
   const menuItem5 = useRef(null);
   const menuItem6 = useRef(null);
 
-  useEffect(() => {
-    const tl = gsap.timeline({ delay: 4 });
-    tl.to(
-      [menuItem1.current, menuItem2.current, menuItem3.current, menuItem4.current, menuItem5.current],
-      { opacity: 1, duration: 0.2, ease: "power3.out" }
-    ).fromTo(
-      menuItem6.current,
-      { scaleX: 0, transformOrigin: "center" },
-      { scaleX: 1, duration: 0.75, ease: "power3.out" }
-    );
 
-    return () => {
-      tl.kill();
-    };
-  }, []);
+  useEffect(() => {
+    // Only create timeline if menu is visible
+    if (isMenuVisible) {
+      const tl = gsap.timeline({ delay: 4 });
+      tl.to(
+        [menuItem1.current, menuItem2.current, menuItem3.current, menuItem4.current, menuItem5.current],
+        { opacity: 1, duration: 2, ease: "power3.out" }
+      ).fromTo(
+        menuItem6.current,
+        { scaleX: 0, transformOrigin: "center" },
+        { scaleX: 1, duration: 0.75, ease: "power3.out" }
+      );
+  
+      return () => {
+        tl.kill();
+      };
+    }
+  }, [isMenuVisible]); 
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");

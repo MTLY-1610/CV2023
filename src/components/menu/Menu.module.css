@@ -23,11 +23,14 @@
   justify-content: space-between;
   background:none;
   padding:0 1rem;
+  transition: all .75s;
+
 }
 
 .menu__item__left,
 .menu__item__center,
 .menu__item__right {
+  /* opacity:0; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -40,29 +43,37 @@
 
 .menu__item__right {
   align-items: flex-end;
+
 }
 
 
 .menu__name,
 .menu__burger {
+
 }
 .menu__name{
   font: 300 12px/15px 'Helvetica Neue' ;
+  opacity:0;
+
 
 }
 .menu__burger{
   font: 900  20px/22px 'Druk Wide LCG' ;
+  opacity:0;
+
 }
 .menu__name__first{
   font: 900  30px/22px 'Druk Wide LCG' ;
   letter-spacing: -3px;
+  opacity:0;
 }
 
 .menu__border {
   width: 100%;
   height: 1px;
   background-color: var(--coolGray1c);
-    transform-origin: center;
+  transform-origin: center;
+
 }
 
   /*______________________________BURGER MENU (NECESSARY?)*/  
@@ -116,6 +127,8 @@
   z-index: 1000;
   padding: 20px;
   background-color: white;
+
+
 }
 
 .fullscreenMenuContent {
@@ -126,6 +139,7 @@
   flex-direction: column;
   gap: 100px;
   z-index: 1100;
+
 }
   /*______________________________MEDIA QUERIES*/  
 @media (max-width: 768px) {

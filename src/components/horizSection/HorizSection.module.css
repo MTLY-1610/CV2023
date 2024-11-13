@@ -30,7 +30,7 @@
   padding: 2rem;
   background-color: none;
   align-items: center;
-  justify-content:space-between;
+  justify-content:flex-end;
   background: white;
   padding-top: 5%;
   background-color: var(--beige);
@@ -39,6 +39,7 @@
 .section__name{
   display: flex;
   width: 100vw;
+  padding-top:2rem;
   align-items: center;
   justify-content: center;
   font-family: 'Druk Wide LCG';

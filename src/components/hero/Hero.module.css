@@ -89,6 +89,7 @@
     font-family:'Ogg-bold';
     font-size: 10vw;
     line-height: 8vw;
+
   }
   .quote__wrapper{
   display:flex;
@@ -96,6 +97,8 @@
   padding-left: 5%;
   height:80vh;
   width:10%;
+  opacity:0;
+
 }
 .text__wrapper{
   display:flex;
@@ -103,6 +106,8 @@
   height:70vh;
   width:90%;
   text-align: right;
+  opacity:0;
+
 
 }
 .hero__image{
