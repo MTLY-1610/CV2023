@@ -4,9 +4,10 @@ import styles from './Menu.module.css';
 
 const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuVisible, setIsMenuVisible] = useState(true);
   const [menuTextColor, setMenuTextColor] = useState("#D9D9D6");
   const [backgroundColor, setBackgroundColor] = useState("#D9D9D6");
-  
+
   const menuItem1 = useRef(null);
   const menuItem2 = useRef(null);
   const menuItem3 = useRef(null);
@@ -38,17 +39,15 @@ const Menu = () => {
       setBackgroundColor(bgColor);
     };
 
-    // Observer configuration map for each section (scrolling down)
     const observerOptionsDown = {
       sectionZero: { rootMargin: "0px 0px 0px 0px", threshold: 0 },
       sectionOne: { rootMargin: "0px 0px -100% 0px", threshold: 0 },
       sectionTwo: { rootMargin: "0px 0px -100% 0px", threshold: 0 },
       sectionThree: { rootMargin: "0px 0px -100% 0px", threshold: 0 },
-      sectionFour: { rootMargin: "-2% 0px -2% 0px", threshold: 0.05 }, // Adjusted margin and threshold
+      sectionFour: { rootMargin: "-2% 0px -2% 0px", threshold: 0.05 },
       sectionFive: { rootMargin: "0px 0px 0px 0px", threshold: 1 }
     };
 
-    // Observer for scrolling down
     const observersDown = Array.from(sections).map((section) => {
       const sectionId = section.id;
       const options = observerOptionsDown[sectionId] || { rootMargin: "0px", threshold: 1 };
@@ -60,6 +59,7 @@ const Menu = () => {
               switch (sectionId) {
                 case "sectionZero":
                   handleColorChange("#D9D9D6", "#D9D9D6");
+                  setIsMenuVisible(true);
                   break;
                 case "sectionOne":
                   handleColorChange("#533fff", "#533fff");
@@ -72,12 +72,15 @@ const Menu = () => {
                   break;
                 case "sectionFour":
                   handleColorChange("#533fff", "#533fff");
+                  setIsMenuVisible(true);
                   break;
                 case "sectionFive":
                   handleColorChange("#1c1c1c", "#1c1c1c");
+                  setIsMenuVisible(false); 
                   break;
                 default:
                   handleColorChange("#D9D9D6", "#D9D9D6");
+                  setIsMenuVisible(true);
               }
             }
           });
@@ -88,6 +91,7 @@ const Menu = () => {
       observer.observe(section);
       return observer;
     });
+
     return () => {
       observersDown.forEach((observer) => observer.disconnect());
     };
@@ -101,7 +105,7 @@ const Menu = () => {
     setIsMenuOpen(false);
   };
 
-  return (
+  return isMenuVisible ? ( // Conditionally render menu based on isMenuVisible
     <div className={styles.menu__wrapper}>
       <div className={styles.menu__items} style={{ color: menuTextColor }}>
         <div className={styles.menu__item__left}>
@@ -136,7 +140,7 @@ const Menu = () => {
       </div>
       <div ref={menuItem6} className={styles.menu__border} style={{ backgroundColor }}></div>
     </div>
-  );
+  ) : null;
 };
 
 export default Menu;
