@@ -4,12 +4,12 @@
   position: fixed;
   top: 0;
   width: 100%;
-  height: 12vh;
+  height: 10vh;
   min-height:145px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 2rem;
   font-size: 1rem;
   z-index: 100;
@@ -18,7 +18,9 @@
 
 .menu__items {
   display: flex;
+  height:100%;
   width: 100%;
+  flex_direction:row;
   align-items: center;
   justify-content: space-between;
   background:none;
@@ -30,44 +32,39 @@
 .menu__item__left,
 .menu__item__center,
 .menu__item__right {
-  /* opacity:0; */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
 }
-
-.menu__item__left {
-  align-items: flex-start;
-}
-
 .menu__item__right {
-  align-items: flex-end;
+  }
+
+.faceF{
+  height:5vh;
+  color: #533fff;
 
 }
 
-
-.menu__name,
-.menu__burger {
-
-}
 .menu__name{
-  font: 300 12px/15px 'Helvetica Neue' ;
-  opacity:0;
-
+  font: 300 .5vw/1vw 'Helvetica Neue' ;
+  height:1.3vh;
+    opacity:0;
 
 }
 .menu__burger{
-  font: 900  20px/22px 'Druk Wide LCG' ;
+  font: 900  1.5vw/1vw  'Druk Wide LCG' ;
   opacity:0;
 
 }
-.menu__name__first{
-  font: 900  30px/22px 'Druk Wide LCG' ;
+.menu__name__first {
+  font: 900  1.5vw/1.5vw 'Druk Wide LCG' ;
   letter-spacing: -3px;
   opacity:0;
 }
-
+.menu__name__baseline{
+  font: 300  .45vw/.75vw 'Helvetica Neue' ;
+  opacity:0;
+}
 .menu__border {
   width: 100%;
   height: 1px;
@@ -169,4 +166,7 @@
     display: none;
   }
 
+}
+@media (min-width: 1250px) {
+  
 }

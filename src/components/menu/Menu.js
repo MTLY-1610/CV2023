@@ -1,10 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import gsap from 'gsap';
 import styles from './Menu.module.css';
+import Image from 'next/image';
+import faceF from 'public/img/faceF.svg';
 
 const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMenuVisible, setIsMenuVisible] = useState(true);
   const [menuTextColor, setMenuTextColor] = useState("#D9D9D6");
   const [backgroundColor, setBackgroundColor] = useState("#D9D9D6");
 
@@ -14,26 +15,24 @@ const Menu = () => {
   const menuItem4 = useRef(null);
   const menuItem5 = useRef(null);
   const menuItem6 = useRef(null);
+  const menuItem7 = useRef(null);
 
 
   useEffect(() => {
-    // Only create timeline if menu is visible
-    if (isMenuVisible) {
-      const tl = gsap.timeline({ delay: 4 });
-      tl.to(
-        [menuItem1.current, menuItem2.current, menuItem3.current, menuItem4.current, menuItem5.current],
-        { opacity: 1, duration: 2, ease: "power3.out" }
-      ).fromTo(
-        menuItem6.current,
-        { scaleX: 0, transformOrigin: "center" },
-        { scaleX: 1, duration: 0.75, ease: "power3.out" }
-      );
-  
-      return () => {
-        tl.kill();
-      };
-    }
-  }, [isMenuVisible]); 
+    const tl = gsap.timeline({ delay: 1.5 });
+    tl.to(
+      [menuItem1.current, menuItem2.current, menuItem3.current, menuItem4.current, menuItem5.current, menuItem6.current],
+      { opacity: 1, duration: 0.2, ease: "power3.out" }
+    ).fromTo(
+      menuItem7.current,
+      { scaleX: 0, transformOrigin: "center" },
+      { scaleX: 1, duration: 0.75, ease: "power3.out" }
+    );
+
+    return () => {
+      tl.kill();
+    };
+  }, []);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -63,7 +62,6 @@ const Menu = () => {
               switch (sectionId) {
                 case "sectionZero":
                   handleColorChange("#D9D9D6", "#D9D9D6");
-                  setIsMenuVisible(true);
                   break;
                 case "sectionOne":
                   handleColorChange("#533fff", "#533fff");
@@ -76,15 +74,12 @@ const Menu = () => {
                   break;
                 case "sectionFour":
                   handleColorChange("#533fff", "#533fff");
-                  setIsMenuVisible(true);
                   break;
                 case "sectionFive":
                   handleColorChange("#1c1c1c", "#1c1c1c");
-                  setIsMenuVisible(false); 
                   break;
                 default:
                   handleColorChange("#D9D9D6", "#D9D9D6");
-                  setIsMenuVisible(true);
               }
             }
           });
@@ -109,21 +104,26 @@ const Menu = () => {
     setIsMenuOpen(false);
   };
 
-  return isMenuVisible ? ( // Conditionally render menu based on isMenuVisible
+  return ( // Conditionally render menu based on isMenuVisible
     <div className={styles.menu__wrapper}>
       <div className={styles.menu__items} style={{ color: menuTextColor }}>
         <div className={styles.menu__item__left}>
           <span ref={menuItem1} className={styles.menu__name__first}>MTLY</span>
+          <span ref={menuItem2} className={styles.menu__name__baseline}>AKA MATHIEU LARROUY</span>
         </div>
-        <div>
-          <span ref={menuItem2} className={styles.menu__name}>UI DEVELOPMENT</span>
-          <span ref={menuItem3} className={styles.menu__name}>UI DESIGN</span>
+        <div  className={styles.menu__item__left}>
+        <span ref={menuItem3} className={styles.menu__name}>MATHIEU <b>LARROUY</b></span>
+          <span ref={menuItem4} className={styles.menu__name}><b>UI</b> DESIGN & DEVELOPMENT</span>
         </div>
         <div className={styles.menu__item__center}>
-          <span ref={menuItem4} className={styles.menu__name}>LOGO HERE</span>
+          <span ref={menuItem5} className={styles.menu__name}>   <Image
+               src={faceF}
+               alt="Fancy display for superficial people"
+               className={styles.faceF}
+        /></span>
         </div>
         <div className={styles.menu__item__right}>
-          <span ref={menuItem5} className={styles.menu__burger}>BEEP ME</span>
+          <span ref={menuItem6} className={styles.menu__burger}>BEEP ME</span>
         </div>
 
         <div className={`${styles.burgerMenu} ${isMenuOpen ? styles.open : ''}`} onClick={toggleMenu}>
@@ -142,9 +142,9 @@ const Menu = () => {
           </div>
         )}
       </div>
-      <div ref={menuItem6} className={styles.menu__border} style={{ backgroundColor }}></div>
+      <div ref={menuItem7} className={styles.menu__border} style={{ backgroundColor }}></div>
     </div>
-  ) : null;
+  ); 
 };
 
 export default Menu;
